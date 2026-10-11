@@ -1,9 +1,14 @@
-import copy,hashlib,importlib.util,json,re,subprocess,unittest
+import copy,hashlib,importlib.util,json,re,shutil,subprocess,tempfile,unittest
 from pathlib import Path
 from unittest.mock import patch
 from PIL import Image,ImageChops,ImageStat
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('rehearsal',ROOT/'tools/render_rehearsal.py');renderer=importlib.util.module_from_spec(spec);spec.loader.exec_module(renderer)
+def local_paths(text):
+ # Public URL paths are not machine-local filesystem evidence.
+ text=re.sub(r'https?://[^\s\"<>]+','PUBLIC_URL',text)
+ return re.findall(r'(?<![\w:/])(?:file://)?/(?:Users|private|tmp|home|Volumes|Applications)(?:/[^\s\"<>]*)?',text)
+
 class RehearsalChecks(unittest.TestCase):
  def setUp(self):
   self.source=json.loads((ROOT/'demo/rehearsal-scenes.json').read_text());self.plan=json.loads((ROOT/'demo/exports/rehearsal-render-plan.json').read_text());self.receipt=json.loads((ROOT/'review/visual/rehearsal/metadata.json').read_text())
@@ -50,6 +55,21 @@ class RehearsalChecks(unittest.TestCase):
    with Image.open(ROOT/frame['path']) as actual,Image.open(ROOT/f'demo/exports/frames/cue-{cue["index"]:02}.png') as expected:
     self.assertLess(max(ImageStat.Stat(ImageChops.difference(actual.convert('RGB'),expected.convert('RGB'))).mean),3)
    with Image.open(ROOT/frame['mobilePath']) as mobile:self.assertEqual(mobile.size,(780,439))
+ def test_public_receipts_use_relative_paths_without_machine_local_fields(self):
+  expected='demo/exports/silent-synthetic-rehearsal.mp4'
+  recorded=json.loads((ROOT/'review/visual/rehearsal/ffprobe.json').read_text())
+  actual=renderer.probe_video(ROOT/expected)
+  self.assertEqual(actual['format']['filename'],expected)
+  self.assertEqual(actual,recorded)
+  with tempfile.TemporaryDirectory(prefix='rehearsal-receipt-') as directory:
+   checkout=Path(directory);video=checkout/expected;video.parent.mkdir(parents=True);shutil.copy2(ROOT/expected,video)
+   with patch.object(renderer,'ROOT',checkout):self.assertEqual(renderer.probe_video(video),recorded)
+  reports=list((ROOT/'review/visual/rehearsal').rglob('*.json'))+list((ROOT/'review/visual/rehearsal').rglob('*.md'))+[ROOT/'demo/exports/rehearsal-render-plan.json']
+  for p in reports:self.assertEqual(local_paths(p.read_text()),[],str(p.relative_to(ROOT)))
+  for prefix in ['/Users/alice/project','/private/build','/tmp/checkout','file:///Users/alice/project']:
+   self.assertTrue(local_paths(prefix),prefix)
+  self.assertEqual(local_paths('https://example.org/Users/public https://example.org/tmp/docs https://example.org/private/page'),[])
+  with self.assertRaises(ValueError):renderer.probe_video(ROOT.parent/'outside.mp4')
  def test_final_artifact_hashes_remain_current(self):
   for item in self.receipt['hashes']:
    p=ROOT/item['path'];self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),item['sha256'],item['path'])

@@ -51,6 +51,11 @@ def require_tool(name):
     return p
 
 def run(args): return subprocess.check_output(args,cwd=ROOT,text=True,stderr=subprocess.STDOUT)
+def probe_video(video):
+    # Relative input prevents ffprobe from publishing the checkout's local path.
+    relative=Path(video).resolve().relative_to(ROOT.resolve()).as_posix()
+    return json.loads(run(['ffprobe','-v','error','-show_format','-show_streams','-of','json',relative]))
+
 def main():
     scenes=validate(json.loads(SOURCE.read_text()));cues=make_cues(scenes)
     for t in ['node','ffmpeg','ffprobe']: require_tool(t)
@@ -77,7 +82,7 @@ def main():
     listing=proof/'concat.txt';listing.write_text(''.join("file '"+p.name+"'\n" for p in segments))
     video=out/'silent-synthetic-rehearsal.mp4'
     run(['ffmpeg','-hide_banner','-loglevel','error','-y','-f','concat','-safe','1','-i',str(listing),'-c','copy','-movflags','+faststart','-metadata','title=DRAFT synthetic silent rehearsal; not product demo','-metadata','comment=No product/sponsor results verified; final approval pending',str(video)])
-    probe=json.loads(run(['ffprobe','-v','error','-show_format','-show_streams','-of','json',str(video)]))
+    probe=probe_video(video)
     (proof/'ffprobe.json').write_text(json.dumps(probe,indent=2)+'\n')
     frames=[]
     from PIL import Image

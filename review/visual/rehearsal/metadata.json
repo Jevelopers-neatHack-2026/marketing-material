@@ -238,8 +238,8 @@
     },
     {
       "path": "tools/render_rehearsal.py",
-      "sha256": "59e4f1d24f0f803c10c4fd87989ccaef371009d5acf71872ba8b75d19a8e2ce9",
-      "bytes": 10647
+      "sha256": "57a1d67b51b86cb752edc04d16231830f7e47bb4b5847c0e1fe83a73efea8982",
+      "bytes": 10855
     },
     {
       "path": "tools/render_rehearsal.mjs",
@@ -253,8 +253,8 @@
     },
     {
       "path": "review/visual/rehearsal/ffprobe.json",
-      "sha256": "06c023ebf5c6ca8e261dcbb128a8d8d011e14cfff8d562e12d49b72c9b3f3db9",
-      "bytes": 2376
+      "sha256": "9fb1ae033268d1ae411072a82e24019c767362f778ed21cb8c899e6b6fb8c379",
+      "bytes": 2283
     },
     {
       "path": "demo/exports/frames/cue-05.png",
@@ -721,7 +721,7 @@
   },
   "testResult": {
     "command": "python3 -m unittest discover -s tests -p 'test_visual_*.py' -v",
-    "passed": 21,
+    "passed": 22,
     "failed": 0,
     "skipped": 0
   },
@@ -751,5 +751,26 @@
       "fix": "Re-inspected final pairs in batches of two scenes",
       "final": "All10 final pairs viewed at both sizes."
     }
-  ]
+  ],
+  "receiptCorrection": {
+    "finding": "MMREL-001",
+    "status": "FIXED_AUTHOR_CHECK_ONLY_PENDING_INDEPENDENT_REVIEW",
+    "method": "ffprobe now receives repository-relative MP4 input with repository cwd; filename is deterministic and relative. Existing media/source/caption/image bytes unchanged.",
+    "checkedReports": [
+      "review/visual/rehearsal/**/*.json",
+      "review/visual/rehearsal/**/*.md",
+      "demo/exports/rehearsal-render-plan.json"
+    ],
+    "independentReview": "pending",
+    "mediaReencoded": false,
+    "reproduction": {
+      "status": "PASS_AUTHOR_CHECK_ONLY",
+      "actualFfprobeIdenticalFromSecondCheckout": true,
+      "relativeFilename": "demo/exports/silent-synthetic-rehearsal.mp4",
+      "baselineCommit": "4ec6eebe01e716376b401e44095213c32780f498",
+      "changedMediaCaptionHtmlInspectionPaths": [],
+      "localPathFindingsInCurrentReports": 0,
+      "regression": "Detects machine-local filesystem prefixes, allows public URL paths, rejects video paths outside repository, resolves macOS checkout directory aliases."
+    }
+  }
 }

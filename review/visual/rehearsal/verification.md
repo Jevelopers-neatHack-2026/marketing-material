@@ -18,7 +18,7 @@ The Python recipe validates source status/timing/copy and pending sponsor facets
 
 The actual final browser run rendered 17 cue frames with exact source screenText and captionText matches, zero page errors, zero external requests, and no main/caption overflow. `browser.json` records measured bounds and the browser version. The plain-text fallback is deliberate: it presents the general scene text without shrinking dense workflow/support diagrams, inventing product UI, or inserting external logos. Existing visual SVG/PNG sources remain unchanged.
 
-All 21 visual tests passed, zero failures/skips, including six rehearsal tests for actual MP4 properties, source/caption timing and text, exact browser copy/status, all 20 decoded scene boundary frames, final hashes, and rejection of malformed timing/copy/sponsor states or missing local runtime. No final-release or independent-approval status is inferred from these tests.
+All 22 visual tests passed, zero failures/skips, including seven rehearsal tests for actual MP4 properties, source/caption timing and text, exact browser copy/status, all 20 decoded scene boundary frames, final hashes, and rejection of malformed timing/copy/sponsor states or missing local runtime. No final-release or independent-approval status is inferred from these tests.
 
 ## Captions, frames, and viewing context
 
@@ -37,3 +37,11 @@ Initial same-document hash navigation repeated scene 1; full query-string naviga
 ## Remaining blocks
 
 All 15 sponsor architecture/implementation/runtime/reasoning/result facets remain PENDING throughout their respective sponsor scenes; providerMode remains `not_run`. Product implementation, authentic customer journey, sponsor usage, and comparable EVAL-02 savings evidence remain unverified. All submission identity/URL/cutoff fields remain pending, and final runtime evidence is blocked. Brand BK14/BK15, source rights/consent/privacy, destination release checks, general ledger/provenance/inventory joins, accountable-owner approval, and fresh independent Astra review remain external gates. This artifact is not a final sponsor-eligible video, product demo, app certification, brand approval, publication approval, or submission.
+
+## MMREL-001 receipt correction
+
+The earlier ffprobe receipt included the author checkout's absolute filename. The recipe now invokes ffprobe with the repository-relative video path and repository cwd. The refreshed filename is exactly `demo/exports/silent-synthetic-rehearsal.mp4`; dependent renderer/ffprobe checksums are refreshed in `metadata.json`. The MP4, SRT, VTT, HTML, cue PNGs, and decoded inspection PNGs were preserved byte-for-byte; no re-encoding or narrative change was needed.
+
+The regression checks the deterministic relative filename and full actual ffprobe result, copies the same MP4 into a second temporary checkout and verifies that its result is identical, scans all rehearsal JSON/Markdown receipts and the render plan for machine-local filesystem fields, and exercises positive leak cases plus public-URL exceptions. Actual second-location ffprobe reproduction passed; all 22 visual tests passed with no skips. The only local-path field found in the original tracked media reports was the corrected ffprobe filename. Independent review of this correction remains pending.
+
+The second-location regression initially exposed macOS temporary-directory alias differences. Resolving both the video and repository root before computing the relative path corrected that case. The final second-location probe and full suite pass.
