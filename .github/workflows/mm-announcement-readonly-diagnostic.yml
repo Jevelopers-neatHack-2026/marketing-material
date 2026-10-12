@@ -1,0 +1,76 @@
+name: Read-only announcement candidate diagnostic
+
+on:
+  push:
+    branches:
+      - diagnostics/mm-announcement-checks-20261012-astra
+    paths:
+      - .github/workflows/mm-announcement-readonly-diagnostic.yml
+
+permissions: {}
+
+jobs:
+  check-pinned-source:
+    if: github.repository == 'Jevelopers-neatHack-2026/marketing-material' && github.event.repository.private == false
+    runs-on: macos-15-intel
+    timeout-minutes: 15
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PIP_DISABLE_PIP_VERSION_CHECK: '1'
+      CANDIDATE: 80ed73f3b86c32b1cc0139174cad6f390afd39c4
+    steps:
+      - name: Read a clean public checkout of the exact candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --no-checkout https://github.com/Jevelopers-neatHack-2026/marketing-material.git source
+          git -C source checkout --detach "$CANDIDATE"
+          test "$(git -C source rev-parse HEAD)" = "$CANDIDATE"
+          git -C source status --porcelain
+          /usr/bin/python3 --version
+          /usr/bin/python3 -c 'import platform; print(platform.platform())'
+          command -v ffprobe || true
+      - name: Verify recorded Python and Pillow prerequisites
+        shell: bash
+        run: |
+          set -euo pipefail
+          /usr/bin/python3 -c 'import sys; assert sys.version_info[:3] == (3, 9, 6), sys.version'
+          /usr/bin/python3 -m venv "$RUNNER_TEMP/mm-venv"
+          "$RUNNER_TEMP/mm-venv/bin/python" -m pip install --no-cache-dir --only-binary=:all: Pillow==11.3.0
+          "$RUNNER_TEMP/mm-venv/bin/python" -c 'import sys, PIL; print(sys.version); print(PIL.__version__); assert PIL.__version__ == "11.3.0"'
+      - name: Run affected offline documentation checks
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd source
+          /usr/bin/python3 -B -m unittest discover -s tests -p 'test_announcement_submission.py' -v
+          /usr/bin/python3 -B -m unittest discover -s tests -p 'test_submission_workflow.py' -v
+          /usr/bin/python3 -B -m unittest discover -s tests -p 'test_narrative_handoff.py' -v
+      - name: Inspect existing media metadata tool without rendering
+        shell: bash
+        run: |
+          set -euo pipefail
+          ffprobe -version
+      - name: Run the existing full offline suite on the pinned candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd source
+          "$RUNNER_TEMP/mm-venv/bin/python" -B -m unittest discover -s tests -v
+      - name: Check current draft integrity without changing readiness
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd source
+          "$RUNNER_TEMP/mm-venv/bin/python" -B tools/validate_collateral.py --mode draft
+      - name: Record source immutability
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd source
+          test "$(git rev-parse HEAD)" = "$CANDIDATE"
+          git diff --exit-code
+          git status --porcelain
