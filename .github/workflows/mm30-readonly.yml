@@ -1,0 +1,92 @@
+name: Read-only PR30 recording handoff diagnostic
+on:
+  push:
+    branches: [diagnostics/mm30-readonly-20261012-astra]
+    paths: [.github/workflows/mm30-readonly.yml]
+permissions: {}
+concurrency:
+  group: mm30-readonly-exact-candidate
+  cancel-in-progress: false
+jobs:
+  check-pinned-candidate:
+    if: github.repository == 'Jevelopers-neatHack-2026/marketing-material' && github.event.repository.private == false
+    runs-on: macos-15-intel
+    timeout-minutes: 25
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PIP_DISABLE_PIP_VERSION_CHECK: '1'
+      CANDIDATE: 9b8f5b256fe7b8a538afe1af029004f3e017fa2e
+    steps:
+      - name: Clone exact public candidate without authentication
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --no-checkout https://github.com/Jevelopers-neatHack-2026/marketing-material.git source
+          git -C source checkout --detach "$CANDIDATE"
+          test "$(git -C source rev-parse HEAD)" = "$CANDIDATE"
+          test -z "$(git -C source status --porcelain)"
+          git -C source log -1 --format='%H %T %P'
+          /usr/bin/python3 -c 'import sys, platform; print(sys.version); print(platform.platform()); assert sys.version_info[:3] == (3, 9, 6), sys.version'
+          /usr/bin/python3 -m venv "$RUNNER_TEMP/mm30-venv"
+          "$RUNNER_TEMP/mm30-venv/bin/python" -m pip install --no-cache-dir --only-binary=:all: Pillow==11.3.0
+          "$RUNNER_TEMP/mm30-venv/bin/python" -c 'import PIL; print(PIL.__version__); assert PIL.__version__ == "11.3.0"'
+      - name: Run exact source and companion regressions
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd source
+          /usr/bin/python3 -B -m unittest discover -s tests -p 'test_recording_handoff_review.py' -v
+          /usr/bin/python3 -B -m unittest discover -s tests -p 'test_submission_workflow.py' -v
+      - name: Build only the pinned FFprobe inspection tool
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch n8.1 https://github.com/FFmpeg/FFmpeg.git "$RUNNER_TEMP/ffmpeg-source"
+          cd "$RUNNER_TEMP/ffmpeg-source"
+          test "$(git rev-parse HEAD)" = 9047fa1b084f76b1b4d065af2d743df1b40dfb56
+          test "$(git rev-parse refs/tags/n8.1)" = a65b3bfe9dacc3b20597ef199d0afdd8bc8128e2
+          ./configure --disable-doc --disable-debug --disable-network --disable-autodetect --disable-everything --disable-programs --enable-ffprobe --enable-protocol=file --enable-demuxer=mov --enable-parser=h264 --enable-decoder=h264 --disable-x86asm > "$RUNNER_TEMP/ffprobe-configure.log" 2>&1 || { tail -80 "$RUNNER_TEMP/ffprobe-configure.log"; exit 1; }
+          make -j3 ffprobe > "$RUNNER_TEMP/ffprobe-build.log" 2>&1 || { tail -80 "$RUNNER_TEMP/ffprobe-build.log"; exit 1; }
+          ./ffprobe -version
+          shasum -a 256 ffprobe
+          echo "$RUNNER_TEMP/ffmpeg-source" >> "$GITHUB_PATH"
+      - name: Run the complete offline test suite
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          command -v ffprobe
+          cd source
+          "$RUNNER_TEMP/mm30-venv/bin/python" -B -m unittest discover -s tests -v
+      - name: Run the affected visual suite
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd source
+          "$RUNNER_TEMP/mm30-venv/bin/python" -B -m unittest discover -s tests -p 'test_visual_*.py' -v
+      - name: Check current draft integrity without changing sources
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd source
+          "$RUNNER_TEMP/mm30-venv/bin/python" -B tools/validate_collateral.py --mode draft
+      - name: Check current package integrity without regeneration
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd source
+          "$RUNNER_TEMP/mm30-venv/bin/python" -B tools/package_collateral.py validate release/v0.1.0-rehearsal/manifest.json
+      - name: Confirm pinned source stayed unchanged
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd source
+          test "$(git rev-parse HEAD)" = "$CANDIDATE"
+          git diff --exit-code
+          test -z "$(git status --porcelain)"
+          printf 'SOURCE_UNCHANGED %s; checks above retain their real conclusions.\n' "$CANDIDATE"
