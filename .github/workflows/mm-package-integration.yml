@@ -1,0 +1,124 @@
+name: Guarded r09 draft integration
+on:
+  push:
+    branches: [diagnostics/mm-announcement-checks-20261012-astra]
+    paths:
+      - .github/workflows/mm-package-integration.yml
+      - .github/diagnostics/mm_submission_refresh.py
+permissions: {}
+concurrency:
+  group: mm-r09-owned-integration-20261012
+  cancel-in-progress: false
+jobs:
+  integrate-owned-candidate:
+    if: github.repository == 'Jevelopers-neatHack-2026/marketing-material' && github.event.repository.private == false
+    permissions:
+      contents: write
+    runs-on: macos-15-intel
+    timeout-minutes: 35
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PIP_DISABLE_PIP_VERSION_CHECK: '1'
+      EXPECTED_SOURCE: 80ed73f3b86c32b1cc0139174cad6f390afd39c4
+      TARGET_BRANCH: fix/mm04-announcement-submission-20261012-astra
+    steps:
+      - name: Read exact public source and the reviewed integration recipe
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --no-checkout https://github.com/Jevelopers-neatHack-2026/marketing-material.git source
+          test "$(git -C source rev-parse "origin/$TARGET_BRANCH")" = "$EXPECTED_SOURCE"
+          git -C source show "$GITHUB_SHA:.github/diagnostics/mm_submission_refresh.py" > "$RUNNER_TEMP/mm_submission_refresh.py"
+          shasum -a 256 "$RUNNER_TEMP/mm_submission_refresh.py"
+          git -C source checkout --detach "$EXPECTED_SOURCE"
+          test "$(git -C source rev-parse HEAD)" = "$EXPECTED_SOURCE"
+          /usr/bin/python3 -c 'import sys, platform; print(sys.version); print(platform.platform()); assert sys.version_info[:3] == (3, 9, 6)'
+          /usr/bin/python3 -m venv "$RUNNER_TEMP/mm-venv"
+          "$RUNNER_TEMP/mm-venv/bin/python" -m pip install --no-cache-dir --only-binary=:all: Pillow==11.3.0
+      - name: Build the exact official FFprobe 8.1 inspection tool only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch n8.1 https://github.com/FFmpeg/FFmpeg.git "$RUNNER_TEMP/ffmpeg-source"
+          cd "$RUNNER_TEMP/ffmpeg-source"
+          test "$(git rev-parse HEAD)" = 9047fa1b084f76b1b4d065af2d743df1b40dfb56
+          test "$(git rev-parse refs/tags/n8.1)" = a65b3bfe9dacc3b20597ef199d0afdd8bc8128e2
+          ./configure --disable-doc --disable-debug --disable-network --disable-autodetect --disable-everything --disable-programs --enable-ffprobe --enable-protocol=file --enable-demuxer=mov --enable-parser=h264 --enable-decoder=h264 --disable-x86asm > "$RUNNER_TEMP/ffprobe-configure.log" 2>&1 || { tail -80 "$RUNNER_TEMP/ffprobe-configure.log"; exit 1; }
+          make -j3 ffprobe > "$RUNNER_TEMP/ffprobe-build.log" 2>&1 || { tail -80 "$RUNNER_TEMP/ffprobe-build.log"; exit 1; }
+          ./ffprobe -version
+          shasum -a 256 ffprobe
+          echo "$RUNNER_TEMP/ffmpeg-source" >> "$GITHUB_PATH"
+      - name: Apply scoped source corrections and validate the complete r09 draft
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd source
+          "$RUNNER_TEMP/mm-venv/bin/python" -B "$RUNNER_TEMP/mm_submission_refresh.py"
+          "$RUNNER_TEMP/mm-venv/bin/python" - <<'PY'
+          import os, re
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP']) / 'mm-results'
+          for name in ('full-suite', 'visual-suite'):
+              text = (root / (name + '.log')).read_text()
+              assert not re.search(r'skipped\s*=|\.\.\. skipped', text), name + ': required skipped cases remain unresolved'
+              count = re.search(r'Ran (\d+) tests? in ([0-9.]+)s', text)
+              assert count and re.search(r'\nOK\s*$', text), name + ': missing passing unittest summary'
+              print('VERIFIED_SUITE', name, count.group(1), 'tests', count.group(2), 'seconds; zero skipped')
+          PY
+      - name: Fast-forward only the explicit owned PR28 branch after all checks
+        env:
+          GH_PUSH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          DELIVERY=$(cat "$RUNNER_TEMP/mm-results/delivery-commit.txt")
+          test "$(git -C source rev-parse HEAD)" = "$DELIVERY"
+          test -z "$(git -C source status --porcelain)"
+          git -C source merge-base --is-ancestor "$EXPECTED_SOURCE" "$DELIVERY"
+          test "$(git -C source ls-remote origin "refs/heads/$TARGET_BRANCH" | cut -f1)" = "$EXPECTED_SOURCE"
+          cat > "$RUNNER_TEMP/mm-askpass.sh" <<'SH'
+          #!/bin/sh
+          case "$1" in
+            *Username*) printf '%s\n' x-access-token ;;
+            *Password*) printf '%s\n' "$GH_PUSH_TOKEN" ;;
+            *) exit 1 ;;
+          esac
+          SH
+          chmod 700 "$RUNNER_TEMP/mm-askpass.sh"
+          GIT_TERMINAL_PROMPT=0 GIT_ASKPASS="$RUNNER_TEMP/mm-askpass.sh" git -C source -c credential.helper= push origin "HEAD:refs/heads/$TARGET_BRANCH"
+          rm "$RUNNER_TEMP/mm-askpass.sh"
+          test "$(git -C source ls-remote origin "refs/heads/$TARGET_BRANCH" | cut -f1)" = "$DELIVERY"
+          printf 'PUSHED_REVIEW_CANDIDATE %s\n' "$DELIVERY"
+      - name: Verify a fresh receiver checkout after the branch push
+        shell: bash
+        run: |
+          set -euo pipefail
+          DELIVERY=$(cat "$RUNNER_TEMP/mm-results/delivery-commit.txt")
+          git clone --no-checkout https://github.com/Jevelopers-neatHack-2026/marketing-material.git receiver
+          git -C receiver checkout --detach "$DELIVERY"
+          cd receiver
+          "$RUNNER_TEMP/mm-venv/bin/python" -B tools/validate_collateral.py --mode draft
+          "$RUNNER_TEMP/mm-venv/bin/python" -B tools/package_collateral.py validate release/v0.1.0-rehearsal/manifest.json
+          "$RUNNER_TEMP/mm-venv/bin/python" -B -m unittest discover -s tests -p 'test_announcement_submission.py' -v
+          "$RUNNER_TEMP/mm-venv/bin/python" -B -m unittest discover -s tests -p 'test_submission_workflow.py' -v
+          "$RUNNER_TEMP/mm-venv/bin/python" -B -m unittest discover -s tests -p 'test_narrative_handoff.py' -v
+          test -z "$(git status --porcelain)"
+          printf 'FRESH_RECEIVER_VERIFIED %s; independent review and owner acceptance still pending\n' "$DELIVERY"
+      - name: Preserve the command outcome summary in the run log
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          /usr/bin/python3 - <<'PY'
+          import hashlib, os
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP']) / 'mm-results'
+          if root.exists():
+              for path in sorted(root.iterdir()):
+                  if path.is_file():
+                      print('RECEIPT', path.name, hashlib.sha256(path.read_bytes()).hexdigest())
+                      if path.suffix == '.exit' or path.name.endswith('-commit.txt') or path.name == 'manifest-sha256.txt':
+                          print(path.read_text().strip())
+          else:
+              print('No integration results were produced; prerequisite steps did not complete.')
+          PY
