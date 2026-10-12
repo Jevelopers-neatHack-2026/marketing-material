@@ -20,8 +20,9 @@ BOUNDARY = "module = ast.parse(recipe, filename=PIN + ':' + PATH)\n"
 TEST_PATH = 'tests/test_current_handoff_status.py'
 TARGET = 'integration/mm07-package-recovery-20261012'
 
-TESTS = r'''"""Offline handoff regression tests; no recording or submission execution."""
+TESTS = r'''"""Offline dated-source checks; no recording, provider or submission action."""
 import ast
+from datetime import datetime, timezone
 import hashlib
 import json
 from pathlib import Path
@@ -29,7 +30,8 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCUMENTS = ('demo/human-recording-runbook.md', 'demo/recording-checklist.md', 'docs/collateral-handoff.md')
-CLOSED = '## Submission window status — closed'
+CURRENT = '## Submission window status — conflicting sources'
+HISTORY = '## Earlier closed-page observation — retained history'
 AMENDMENT = '## Latest producer amendment — 01c65ae'
 
 
@@ -40,17 +42,20 @@ def section(text, heading):
 
 
 class CurrentHandoffStatusTests(unittest.TestCase):
-    def test_closed_window_is_not_an_entry_or_deadline_receipt(self):
+    def test_conflicting_windows_require_authoritative_confirmation(self):
         for path in DOCUMENTS:
             with self.subTest(path=path):
                 text = (ROOT / path).read_text(encoding='utf-8')
-                body = section(text, CLOSED)
-                for phrase in ('Submissions closed', 'https://neatlogs.com/hackathon',
-                               'not a Discord cutoff confirmation', 'not proof of a submitted entry',
-                               'organizer-authorized late-entry exception',
+                body = section(text, CURRENT)
+                for phrase in ('2026-10-12T19:40:22Z', 'https://neatlogs.com/hackathon',
+                               'https://neatlogs.com/submission', 'October 13',
+                               '01:30 UTC', '18:25 UTC', 'authoritative Discord',
+                               'not proof of a submitted entry',
                                'CANCELLED_USER_REQUEST_NO_RESTART'):
                     self.assertIn(phrase, body)
-                self.assertLess(text.index(CLOSED), text.index(AMENDMENT))
+                self.assertLess(text.index(CURRENT), text.index(HISTORY))
+                self.assertLess(text.index(HISTORY), text.index(AMENDMENT))
+                self.assertIn('Submissions closed', section(text, HISTORY))
 
     def test_newer_opening_keeps_two_turns_and_source_attribution(self):
         for path in DOCUMENTS:
@@ -65,17 +70,32 @@ class CurrentHandoffStatusTests(unittest.TestCase):
                 self.assertIn('6129152479', text)
                 self.assertIn('CFO-R2-001', text)
 
-    def test_organizer_availability_has_no_fabricated_completion(self):
+    def test_public_page_disagreement_has_no_fabricated_completion(self):
         data = json.loads((ROOT / 'review/official-format-sources.json').read_text())
         current = data.get('availabilitySnapshot', {})
-        self.assertEqual(current.get('status'), 'submissions_closed')
-        self.assertEqual(current.get('checkedAt'), '2026-10-12 UTC')
-        self.assertEqual(current.get('url'), 'https://neatlogs.com/hackathon')
-        self.assertEqual(current.get('observedText'), 'Submissions closed')
+        self.assertEqual(current.get('status'), 'conflicting_published_windows')
+        self.assertEqual(current.get('checkedAt'), '2026-10-12T19:40:22Z')
+        self.assertIsNone(current.get('authoritativeCutoff'))
         self.assertIsNone(current.get('lateEntryException'))
         self.assertIsNone(current.get('submittedEntryEvidence'))
         self.assertFalse(current.get('interactiveFormExecuted', True))
         self.assertEqual(data['currentSubmissionProcedureSourceId'], 'OFFICIAL-NEATHACK-SUBMISSION-20261012')
+
+    def test_observations_preserve_history_and_timezone_disagreement(self):
+        data = json.loads((ROOT / 'review/official-format-sources.json').read_text())
+        history = data.get('availabilityObservationHistory', [])
+        self.assertEqual(len(history), 1)
+        self.assertEqual(history[0]['status'], 'submissions_closed')
+        self.assertEqual(history[0]['observedText'], 'Submissions closed')
+        self.assertIsNone(history[0]['submittedEntryEvidence'])
+        observations = data['availabilitySnapshot']['observations']
+        self.assertEqual(len(observations), 2)
+        self.assertEqual({row['url'] for row in observations},
+                         {'https://neatlogs.com/hackathon', 'https://neatlogs.com/submission'})
+        self.assertEqual(len({row['closesUtc'] for row in observations}), 2)
+        for row in observations:
+            actual = datetime.fromisoformat(row['closesIst']).astimezone(timezone.utc)
+            self.assertEqual(actual, datetime.fromisoformat(row['closesUtc'].replace('Z', '+00:00')))
 
     def test_availability_does_not_replace_historical_format_observations(self):
         data = json.loads((ROOT / 'review/official-format-sources.json').read_text())
@@ -97,8 +117,7 @@ class CurrentHandoffStatusTests(unittest.TestCase):
             ast.parse("value = 'This is the producer's human instruction.'")
 
     def test_safe_literal_roundtrip_handles_apostrophes(self):
-        # Synthetic negative/recovery control; the actual pinned recipe parse is
-        # separately retained in the native integration run, not simulated here.
+        # Synthetic control; the actual pinned recipe parse is retained in CI.
         for value in ("producer's instruction", 'quoted "text"', 'new\nline'):
             tree = ast.parse('value = ' + repr(value))
             self.assertEqual(ast.literal_eval(tree.body[0].value), value)
@@ -109,17 +128,21 @@ if __name__ == '__main__':
 '''
 
 NOTICE = '''
-## Submission window status — closed
+## Submission window status — conflicting sources
 
-On 2026-10-12 UTC, after the published 18:25 UTC window, the [public organizer page](https://neatlogs.com/hackathon) displayed **Submissions closed**. This is an availability observation, not a Discord cutoff confirmation and not proof of a submitted entry. Earlier GO instructions, recording packs and website times below are dated history, not a current instruction to record, spend, publish or submit.
+At **2026-10-12T19:40:22Z**, the [hackathon page](https://neatlogs.com/hackathon) listed a closing time of **October 13, 2026, 7:00 AM IST** (**01:30 UTC October 13; 9:30 PM EDT October 12**). The separately checked [public submission form](https://neatlogs.com/submission) still listed **October 12, 2026, 11:55 PM IST** (**18:25 UTC; 2:25 PM EDT October 12**). These public pages disagree. The zeroed page countdown is not interpreted as an acceptance test. This is a dated public-page observation, not an executed form check, not authoritative Discord confirmation and not proof of a submitted entry.
 
-Before any external submission work resumes, the authorized human submitter must provide an **organizer-authorized late-entry exception** with its scope and deadline. For an entry already completed, obtain its actual public post URL and a separate sanitized final form acknowledgement; absent receipts remain unknown, not evidence that nobody submitted. Do not backdate commits, recordings or eligibility claims. The final media, owner review, rights, exact claims and submission receipts remain separate prerequisites. Agent capture stays `CANCELLED_USER_REQUEST_NO_RESTART`; this note authorizes no provider use, recording, upload, publication or form action.
+The authorized human submitter must confirm the latest **authoritative Discord or organizer cutoff and eligibility** before an external action. Where the confirmed cutoff has expired, obtain an explicit organizer-authorized late-entry exception; do not presume an exception is always required merely from the earlier closed-page observation. Actual public quote-post and separate final form acknowledgement remain missing evidence, not proof that nobody submitted. Do not backdate commits, recordings or eligibility claims. Final media, owner review, exact claims, rights and submission receipts remain separate prerequisites. Agent capture stays `CANCELLED_USER_REQUEST_NO_RESTART`; no provider use, recording, upload, publication or form action is authorized here.
+
+## Earlier closed-page observation — retained history
+
+Earlier on 2026-10-12 UTC, after the originally published 18:25 UTC window, the public hackathon page displayed **Submissions closed**. That observation is retained in `availabilityObservationHistory`, not silently erased. It is no longer treated as the latest uncontested submission state: the later conflicting public-page observations above supersede it for handoff purposes. Earlier GO instructions, recording packs and website schedules below are dated records, not fresh authority to record, spend, publish or submit.
 
 ## Latest producer amendment — 01c65ae
 
 At **2026-10-12T18:06:34Z**, [the producer amended the recording pack](https://github.com/Jevelopers-neatHack-2026/marketing-material/issues/22#issuecomment-6129852860), reporting health commit `01c65ae` and the #104 landing page at `/`, with the paste box under the hero, Try the studio and Make yours. The alternative `/make` was reported unchanged. This is the producer observation, **not a new marketing runtime measurement** and **not a completed recording**. The earlier [17:21:38 UTC GO for `6daafba`](https://github.com/Jevelopers-neatHack-2026/marketing-material/issues/22#issuecomment-6129152479) remains a historical take-specific instruction, not the latest opening.
 
-The producer retained **two separate turns** because #100 and #112 were not live in that observation: first correct the date and Apply, visually check **17 OCT**, then request moodier art and Apply. **Generate art only once** under the human contributor's existing authorization; this document supplies none. Keep the same-session timestamp/Neatlogs handoff, Entire evidence limits, guarded CFO workbook and hypothetical forecast labels, including `CFO-R2-001`. A person already mid-take was not instructed to restart; the producer allowed changing only the opening. These are preserved human instructions, not execution, fixed-defect, timing, provider-cost, approval or submission evidence. The closed-window notice above governs current external-action readiness.
+The producer retained **two separate turns** because #100 and #112 were not live in that observation: first correct the date and Apply, visually check **17 OCT**, then request moodier art and Apply. **Generate art only once** under the human contributor's existing authorization; this document supplies none. Keep the same-session timestamp/Neatlogs handoff, Entire evidence limits, guarded CFO workbook and hypothetical forecast labels, including `CFO-R2-001`. A person already mid-take was not instructed to restart; the producer allowed changing only the opening. These are preserved human instructions, not execution, fixed-defect, timing, provider-cost, approval or submission evidence. The conflicting-source notice above governs current external-action readiness.
 
 '''
 
@@ -164,15 +187,16 @@ def main() -> None:
     repaired = once(repaired, 'dump(SPEC, spec)\n',
         "for selected in spec['assets']:\n"
         "    if selected['assetId'] in {'LAUNCH-X-COPY-001', 'DEMO-HUMAN-RECORDING-RUNBOOK-001'}:\n"
-        "        selected['limitations'].append('The producer amended the opening at 18:06:34 UTC to reported 01c65ae; retain the two-turn workaround. The organizer page subsequently displayed Submissions closed. No prior-entry receipt or late-entry exception is supplied. Historical GO and procedure are not present authorization; capture remains cancelled.')\n"
+        "        selected['limitations'].append('The producer amended the opening at 18:06:34 UTC to reported 01c65ae; retain the two-turn workaround. An earlier closed-page observation is retained as history; at 19:40:22 UTC the hackathon page listed October 13 01:30 UTC while the form retained October 12 18:25 UTC. Public windows conflict. Authoritative cutoff/eligibility confirmation and actual entry receipts remain absent. Historical GO and procedure are not present authorization; capture remains cancelled.')\n"
         'dump(SPEC, spec)\n')
 
     baseline = "\n(ROOT / " + repr(TEST_PATH) + ").write_text(" + repr(TESTS) + ", encoding='utf-8')\n"
     baseline += "command('current-status-baseline', [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_current_handoff_status.py', '-v'], expected=1)\n"
     baseline += "baseline_output = (LOGS / 'current-status-baseline.log').read_text()\nassert 'FAILED (failures=' in baseline_output and 'ERROR:' not in baseline_output, 'Unexpected baseline error instead of source regression'\n"
     updates = "\nnotice = " + repr(NOTICE) + "\n"
-    updates += "for name in ('demo/human-recording-runbook.md', 'demo/recording-checklist.md', 'docs/collateral-handoff.md'):\n    document = (ROOT / name).read_text(encoding='utf-8')\n    title, rest = document.split('\\n', 1)\n    assert '## Submission window status — closed' not in document\n    (ROOT / name).write_text(title + '\\n' + notice + rest, encoding='utf-8')\n"
+    updates += "for name in ('demo/human-recording-runbook.md', 'demo/recording-checklist.md', 'docs/collateral-handoff.md'):\n    document = (ROOT / name).read_text(encoding='utf-8')\n    title, rest = document.split('\\n', 1)\n    assert '## Submission window status — conflicting sources' not in document\n    (ROOT / name).write_text(title + '\\n' + notice + rest, encoding='utf-8')\n"
     updates += "formats = load('review/official-format-sources.json')\nassert 'availabilitySnapshot' not in formats\nformats['availabilitySnapshot'] = {'sourceId': 'OFFICIAL-NEATHACK-AVAILABILITY-20261012-CLOSED', 'url': 'https://neatlogs.com/hackathon', 'checkedAt': '2026-10-12 UTC', 'status': 'submissions_closed', 'observedText': 'Submissions closed', 'lateEntryException': None, 'submittedEntryEvidence': None, 'interactiveFormExecuted': False, 'scope': 'Public-page availability observation after the displayed 18:25 UTC window; not Discord confirmation, actual entry evidence or permission. Prior format observations are unchanged.'}\ndump('review/official-format-sources.json', formats)\n"
+    updates += "formats = load('review/official-format-sources.json')\nformats['availabilityObservationHistory'] = [formats['availabilitySnapshot']]\nformats['availabilitySnapshot'] = {'sourceId': 'OFFICIAL-NEATHACK-AVAILABILITY-20261012-CONFLICT', 'checkedAt': '2026-10-12T19:40:22Z', 'status': 'conflicting_published_windows', 'observations': [{'url': 'https://neatlogs.com/hackathon', 'closesIst': '2026-10-13T07:00:00+05:30', 'closesUtc': '2026-10-13T01:30:00Z', 'inspectionScope': 'public page; zeroed countdown not interpreted as availability'}, {'url': 'https://neatlogs.com/submission', 'closesIst': '2026-10-12T23:55:00+05:30', 'closesUtc': '2026-10-12T18:25:00Z', 'inspectionScope': 'public first step only; no login, draft save, form progression or submission'}], 'authoritativeCutoff': None, 'lateEntryException': None, 'submittedEntryEvidence': None, 'interactiveFormExecuted': False, 'scope': 'Conflicting public schedules; obtain latest authoritative Discord/organizer cutoff and eligibility. Do not infer acceptance, completion, a new grant or missing entry. Retain the earlier closed-page observation as history.'}\ndump('review/official-format-sources.json', formats)\n"
     updates += "command('current-status-corrected', [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_current_handoff_status.py', '-v'])\n"
     # Run 38297701863 registered the new test, but the inherited recipe only
     # staged source paths already present in its input index. Include exactly
