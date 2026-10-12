@@ -15,7 +15,7 @@ jobs:
     env:
       PYTHONDONTWRITEBYTECODE: '1'
       PIP_DISABLE_PIP_VERSION_CHECK: '1'
-      CANDIDATE: 9b8f5b256fe7b8a538afe1af029004f3e017fa2e
+      CANDIDATE: 38c6d60d8863fd17136b3f9e6d6d94b3b6efc8ff
     steps:
       - name: Clone exact public candidate without authentication
         shell: bash
@@ -86,7 +86,7 @@ jobs:
         run: |
           set -euo pipefail
           cd source
-          test "$(git rev-parse HEAD)" = "$CANDIDATE"
+          test "$(git -C . rev-parse HEAD)" = "$CANDIDATE"
           git diff --exit-code
           test -z "$(git status --porcelain)"
           printf 'SOURCE_UNCHANGED %s; checks above retain their real conclusions.\n' "$CANDIDATE"
