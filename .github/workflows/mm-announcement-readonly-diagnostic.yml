@@ -2,18 +2,14 @@ name: Read-only announcement candidate diagnostic
 
 on:
   push:
-    branches:
-      - diagnostics/mm-announcement-checks-20261012-astra
-    paths:
-      - .github/workflows/mm-announcement-readonly-diagnostic.yml
-
+    branches: [diagnostics/mm-announcement-checks-20261012-astra]
+    paths: [.github/workflows/mm-announcement-readonly-diagnostic.yml]
 permissions: {}
-
 jobs:
   check-pinned-source:
     if: github.repository == 'Jevelopers-neatHack-2026/marketing-material' && github.event.repository.private == false
     runs-on: macos-15-intel
-    timeout-minutes: 15
+    timeout-minutes: 25
     env:
       PYTHONDONTWRITEBYTECODE: '1'
       PIP_DISABLE_PIP_VERSION_CHECK: '1'
@@ -29,7 +25,6 @@ jobs:
           git -C source status --porcelain
           /usr/bin/python3 --version
           /usr/bin/python3 -c 'import platform; print(platform.platform())'
-          command -v ffprobe || true
       - name: Verify recorded Python and Pillow prerequisites
         shell: bash
         run: |
@@ -38,6 +33,41 @@ jobs:
           /usr/bin/python3 -m venv "$RUNNER_TEMP/mm-venv"
           "$RUNNER_TEMP/mm-venv/bin/python" -m pip install --no-cache-dir --only-binary=:all: Pillow==11.3.0
           "$RUNNER_TEMP/mm-venv/bin/python" -c 'import sys, PIL; print(sys.version); print(PIL.__version__); assert PIL.__version__ == "11.3.0"'
+      - name: Build only the pinned official FFprobe 8.1 inspection tool
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch n8.1 https://github.com/FFmpeg/FFmpeg.git "$RUNNER_TEMP/ffmpeg-source"
+          cd "$RUNNER_TEMP/ffmpeg-source"
+          test "$(git rev-parse HEAD)" = 9047fa1b084f76b1b4d065af2d743df1b40dfb56
+          test "$(git rev-parse refs/tags/n8.1)" = a65b3bfe9dacc3b20597ef199d0afdd8bc8128e2
+          ./configure --disable-doc --disable-debug --disable-network --disable-autodetect --disable-everything --disable-programs --enable-ffprobe --enable-protocol=file --enable-demuxer=mov --enable-parser=h264 --enable-decoder=h264 --disable-x86asm > "$RUNNER_TEMP/ffprobe-configure.log" 2>&1 || { tail -80 "$RUNNER_TEMP/ffprobe-configure.log"; exit 1; }
+          make -j3 ffprobe > "$RUNNER_TEMP/ffprobe-build.log" 2>&1 || { tail -80 "$RUNNER_TEMP/ffprobe-build.log"; exit 1; }
+          ./ffprobe -version
+          shasum -a 256 ffprobe
+          echo "$RUNNER_TEMP/ffmpeg-source" >> "$GITHUB_PATH"
+      - name: Inspect representative source and package provenance records
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd source
+          /usr/bin/python3 - <<'PY'
+          import json
+          from pathlib import Path
+          inv = json.loads(Path('docs/collateral-inventory.json').read_text())
+          prov = json.loads(Path('review/provenance.json').read_text())
+          targets = {'tests/test_narrative_handoff.py', 'launch/deliverable-briefs.md', 'review/official-format-sources.json', 'docs/collateral-handoff.md'}
+          sample = next(row['path'] for row in inv['trackedFiles'] if '/assets/' in row['path'] and '-r08-' in row['path'])
+          targets.add(sample)
+          for row in inv['trackedFiles']:
+              if row['path'] in targets:
+                  print('INVENTORY', json.dumps(row, sort_keys=True))
+          for row in prov['records']:
+              if row.get('source', {}).get('path') in targets:
+                  print('PROVENANCE', json.dumps(row, sort_keys=True))
+          print('REQUIRED_FIELDS', prov['requiredRecordFields'])
+          PY
       - name: Run affected offline documentation checks
         if: always()
         shell: bash
@@ -47,15 +77,12 @@ jobs:
           /usr/bin/python3 -B -m unittest discover -s tests -p 'test_announcement_submission.py' -v
           /usr/bin/python3 -B -m unittest discover -s tests -p 'test_submission_workflow.py' -v
           /usr/bin/python3 -B -m unittest discover -s tests -p 'test_narrative_handoff.py' -v
-      - name: Inspect existing media metadata tool without rendering
-        shell: bash
-        run: |
-          set -euo pipefail
-          ffprobe -version
       - name: Run the existing full offline suite on the pinned candidate
+        if: always()
         shell: bash
         run: |
           set -euo pipefail
+          command -v ffprobe
           cd source
           "$RUNNER_TEMP/mm-venv/bin/python" -B -m unittest discover -s tests -v
       - name: Check current draft integrity without changing readiness
