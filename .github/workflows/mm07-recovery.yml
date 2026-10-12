@@ -1,0 +1,121 @@
+name: Isolated marketing package recovery
+on:
+  push:
+    branches: [diagnostics/mm07-package-recovery-20261012]
+    paths: [.github/workflows/mm07-recovery.yml, .github/diagnostics/mm07_recovery.py]
+permissions:
+  contents: write
+concurrency:
+  group: mm07-package-recovery-20261012
+  cancel-in-progress: false
+jobs:
+  recover-and-verify:
+    if: github.repository == 'Jevelopers-neatHack-2026/marketing-material' && github.event.repository.private == false
+    runs-on: macos-15-intel
+    timeout-minutes: 45
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PIP_DISABLE_PIP_VERSION_CHECK: '1'
+      MAIN: 79ae21607eb4d98188f85ce3c42b8be6eb5688bc
+      SOURCE: c4e62bf97d2e67878bdabb4aa2c499ffe0d4213c
+      ANNOUNCEMENT: 80ed73f3b86c32b1cc0139174cad6f390afd39c4
+      DOCS: b8b5fb76ef7d0112a7774970708ef06281882818
+      TARGET: integration/mm07-package-recovery-20261012
+    steps:
+      - name: Isolated checkout and normal merges of unchanged writer heads
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --no-checkout https://github.com/Jevelopers-neatHack-2026/marketing-material.git source
+          cd source
+          test "$(git rev-parse origin/main)" = "$MAIN"
+          test "$(git rev-parse "origin/$TARGET")" = "$MAIN"
+          test "$(git rev-parse origin/fix/mm22-recording-review-20261012-astra)" = "$SOURCE"
+          test "$(git rev-parse origin/fix/mm04-announcement-submission-20261012-astra)" = "$ANNOUNCEMENT"
+          test "$(git rev-parse origin/docs/org-documentation-20261012)" = "$DOCS"
+          git checkout -b isolated-mm07-recovery "$MAIN"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git merge --no-ff --no-edit "$SOURCE"
+          git merge --no-ff --no-edit "$ANNOUNCEMENT"
+          git merge --no-ff --no-edit "$DOCS"
+          for PIN in "$MAIN" "$SOURCE" "$ANNOUNCEMENT" "$DOCS"; do git merge-base --is-ancestor "$PIN" HEAD; done
+          test -z "$(git status --porcelain)"
+          # Root README, organization contribution/template and local release/handoff
+          # instructions were read before this run. Stop on new instruction files.
+          git ls-files | grep -Ei '(^|/)(AGENTS\.md|CONTRIBUTING(\.md)?|CODEOWNERS|pull_request_template\.md)$' > "$RUNNER_TEMP/mm07-new-instructions.txt" || true
+          if test -s "$RUNNER_TEMP/mm07-new-instructions.txt"; then cat "$RUNNER_TEMP/mm07-new-instructions.txt"; echo 'New instructions require an actual read before edits'; exit 1; fi
+          git log -4 --format='%H %P %s'
+          echo "MM_COMBINED_SOURCE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          git show "$GITHUB_SHA:.github/diagnostics/mm07_recovery.py" > "$RUNNER_TEMP/mm07-recovery.py"
+          test "$(shasum -a 256 "$RUNNER_TEMP/mm07-recovery.py" | cut -d ' ' -f1)" = 5fd6e49efcd37fff6f8cf734e7f14bde6f42fe7ac5426abc29bb8a58bfc8cd7e
+      - name: Exact Python environment and generated-source preflight before expensive checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          /usr/bin/python3 -c 'import sys,platform; print(sys.version); print(platform.platform()); assert sys.version_info[:3] == (3,9,6)'
+          /usr/bin/python3 -m venv "$RUNNER_TEMP/mm07-venv"
+          "$RUNNER_TEMP/mm07-venv/bin/python" -m pip install --no-cache-dir --only-binary=:all: Pillow==11.3.0
+          "$RUNNER_TEMP/mm07-venv/bin/python" -c 'import PIL; print(PIL.__version__); assert PIL.__version__ == "11.3.0"'
+          cd source
+          "$RUNNER_TEMP/mm07-venv/bin/python" -B "$RUNNER_TEMP/mm07-recovery.py" --preflight
+          test -z "$(git status --porcelain)"
+      - name: Build pinned offline FFprobe inspector without media generation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch n8.1 https://github.com/FFmpeg/FFmpeg.git "$RUNNER_TEMP/ffmpeg-source"
+          cd "$RUNNER_TEMP/ffmpeg-source"
+          test "$(git rev-parse HEAD)" = 9047fa1b084f76b1b4d065af2d743df1b40dfb56
+          test "$(git rev-parse refs/tags/n8.1)" = a65b3bfe9dacc3b20597ef199d0afdd8bc8128e2
+          ./configure --disable-doc --disable-debug --disable-network --disable-autodetect --disable-everything --disable-programs --enable-ffprobe --enable-protocol=file --enable-demuxer=mov --enable-parser=h264 --enable-decoder=h264 --disable-x86asm > "$RUNNER_TEMP/ffprobe-configure.log" 2>&1 || { tail -80 "$RUNNER_TEMP/ffprobe-configure.log"; exit 1; }
+          make -j3 ffprobe > "$RUNNER_TEMP/ffprobe-build.log" 2>&1 || { tail -80 "$RUNNER_TEMP/ffprobe-build.log"; exit 1; }
+          ./ffprobe -version
+          shasum -a 256 ffprobe
+          echo "$RUNNER_TEMP/ffmpeg-source" >> "$GITHUB_PATH"
+      - name: Retained baseline, source correction, exact package and complete validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd source
+          "$RUNNER_TEMP/mm07-venv/bin/python" -B "$RUNNER_TEMP/mm07-recovery.py"
+          git diff "$MAIN" HEAD --check
+          "$RUNNER_TEMP/mm07-venv/bin/python" -B -c 'import ast,pathlib,subprocess; files=subprocess.check_output(["git","ls-files","*.py"],text=True).splitlines(); [ast.parse(pathlib.Path(p).read_text(encoding="utf-8"),filename=p) for p in files]; print("TRACKED_PYTHON_SYNTAX_PASS",len(files))'
+          test -z "$(git status --porcelain)"
+      - name: Push only the unchanged new integration branch after all gates pass
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          cd source
+          DELIVERY=$(cat "$RUNNER_TEMP/mm-results/delivery-commit.txt")
+          test "$(git rev-parse HEAD)" = "$DELIVERY"
+          test -z "$(git status --porcelain)"
+          test "$(git ls-remote origin "refs/heads/$TARGET" | cut -f1)" = "$MAIN"
+          test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$MAIN"
+          test "$(git ls-remote origin refs/heads/fix/mm22-recording-review-20261012-astra | cut -f1)" = "$SOURCE"
+          test "$(git ls-remote origin refs/heads/fix/mm04-announcement-submission-20261012-astra | cut -f1)" = "$ANNOUNCEMENT"
+          test "$(git ls-remote origin refs/heads/docs/org-documentation-20261012 | cut -f1)" = "$DOCS"
+          git merge-base --is-ancestor "$MAIN" "$DELIVERY"
+          AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 | tr -d '\n')
+          printf '::add-mask::%s\n' "$AUTH"
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH" push origin "$DELIVERY:refs/heads/$TARGET"
+          unset AUTH GH_TOKEN
+          test "$(git ls-remote origin "refs/heads/$TARGET" | cut -f1)" = "$DELIVERY"
+          printf 'PUSHED_FOR_INDEPENDENT_REVIEW_NOT_MERGE %s\n' "$DELIVERY"
+      - name: Fresh receiver verifies the actual pushed candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          DELIVERY=$(cat "$RUNNER_TEMP/mm-results/delivery-commit.txt")
+          git clone --no-checkout https://github.com/Jevelopers-neatHack-2026/marketing-material.git receiver
+          git -C receiver checkout --detach "$DELIVERY"
+          cd receiver
+          test "$(git rev-parse HEAD)" = "$DELIVERY"
+          "$RUNNER_TEMP/mm07-venv/bin/python" -B -m unittest discover -s tests -v
+          "$RUNNER_TEMP/mm07-venv/bin/python" -B tools/validate_collateral.py --mode draft
+          "$RUNNER_TEMP/mm07-venv/bin/python" -B tools/package_collateral.py validate release/v0.1.0-rehearsal/manifest.json
+          git diff --check
+          test -z "$(git status --porcelain)"
+          printf 'FRESH_RECEIVER_VERIFIED %s; independent review and merge are separate.\n' "$DELIVERY"
