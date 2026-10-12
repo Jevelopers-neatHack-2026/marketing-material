@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "inventoryKey": "MM-01",
-  "inventoryDate": "2026-10-11",
+  "inventoryDate": "2026-10-12",
   "repository": {
     "name": "Jevelopers-neatHack-2026/marketing-material",
     "url": "https://github.com/Jevelopers-neatHack-2026/marketing-material",
@@ -3381,8 +3381,8 @@
       "lifecycleState": "draft",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "3dc4636f7a68925abc629d46eeba66fd8955e149",
-      "sha256": "8193d82268d36030d6433ddedd6b350f657216527fc82dc46c1dd0f043947a74",
+      "trackedAtRevision": "397c8984f3af75d3139765589fe11cf95330a787",
+      "sha256": "525c362a3cd3d41a52bc14b3ff31af357ef97a563dc65c7894a50834bdaf8613",
       "provenanceRecordId": "DEMO-RECORDING-CHECKLIST-001"
     },
     {
@@ -3441,8 +3441,8 @@
       "lifecycleState": "not_applicable",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "16f373f4916334bbf0f5c27ce33b842c62309f5b",
-      "sha256": "daea625218e0969b10d094f64ed7bbd5d531efcf147e0b3737472d00a50167f8",
+      "trackedAtRevision": "397c8984f3af75d3139765589fe11cf95330a787",
+      "sha256": "d17b2250255bc38d3444d0cb2db12d56fb4d149827d27d61d1c9e0b7b21b8651",
       "provenanceRecordId": "HANDOFF-GUIDE-001"
     },
     {
@@ -3453,8 +3453,8 @@
       "lifecycleState": "draft",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "be44ba590575d8d3e3a72aafda6e2353bb333adc",
-      "sha256": "31b61fceca4012e66054ce44d358042d5abe47ef5319b02e8a479218bbf36526",
+      "trackedAtRevision": "397c8984f3af75d3139765589fe11cf95330a787",
+      "sha256": "e4e27b9f9cd2d76f29cf2372a3b8558a9055227d9facefbbdacbc5da86bd0acd",
       "provenanceRecordId": "LAUNCH-X-COPY-001"
     },
     {
@@ -3465,8 +3465,8 @@
       "lifecycleState": "draft",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "be44ba590575d8d3e3a72aafda6e2353bb333adc",
-      "sha256": "5360e3f516231e3cfece441cd31f31c223d43aad964cbe290dc03519b6a46634",
+      "trackedAtRevision": "397c8984f3af75d3139765589fe11cf95330a787",
+      "sha256": "6d1b8f182889d685d9d3c336f9ebf7402145d2e0aae710db86866776bd4c27e4",
       "provenanceRecordId": "PROV-FILE-B9AC31BA1594"
     },
     {
@@ -6009,8 +6009,8 @@
       "lifecycleState": "draft",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "3205c6b492be6e1eb58d4334c0c71cfd514e515c",
-      "sha256": "90ba5a954549b324215ca2b8c7d9bdffdff503b61df1d73d66a3734eb751371d",
+      "trackedAtRevision": "397c8984f3af75d3139765589fe11cf95330a787",
+      "sha256": "1d1fc22f75a7a5993e9d725c1e4c8959be91e37b1ed49d63b7b39b4743a093de",
       "provenanceRecordId": "DEMO-HUMAN-RECORDING-RUNBOOK-001"
     },
     {
@@ -6852,6 +6852,54 @@
       "trackedAtRevision": "944c57b12dd3bff00f46c868400b9e52261715e1",
       "sha256": "b279a99be5905c70e232a2161fe4a0e2dd777efbc7214e683aa3491e0ab6f854",
       "provenanceRecordId": "PROV-FILE-713ADC9BEA87"
+    },
+    {
+      "fileId": "FILE-5077EDF0741A",
+      "path": "tests/test_announcement_submission.py",
+      "classification": "validation_test",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "77e6954fa4fa961938d43609463aa8ca07682d2e",
+      "sha256": "bb599425f59c8fa12680cf4602191a78a64bf619cb9ec8c5d8eeb5f62505bc81",
+      "provenanceRecordId": "PROV-FILE-5077EDF0741A"
+    },
+    {
+      "fileId": "FILE-DED7E35CB9A3",
+      "path": "tests/test_producer_go_handoff.py",
+      "classification": "validation_test",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "c4e62bf97d2e67878bdabb4aa2c499ffe0d4213c",
+      "sha256": "1a4080b6eb4a6cdf838594d9dfe647953f255c6bcd2901293ea52e2f22b38637",
+      "provenanceRecordId": "PROV-FILE-DED7E35CB9A3"
+    },
+    {
+      "fileId": "FILE-7F74897C1061",
+      "path": "tests/test_recording_handoff_review.py",
+      "classification": "validation_test",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "38c6d60d8863fd17136b3f9e6d6d94b3b6efc8ff",
+      "sha256": "319e252a9a822f3b4d172cb4e573c0a46507c0c8821584221ff6132637079793",
+      "provenanceRecordId": "PROV-FILE-7F74897C1061"
+    },
+    {
+      "fileId": "FILE-D4E118A3C4B5",
+      "path": "tests/test_submission_workflow.py",
+      "classification": "validation_test",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "e2344438b4c95bc874539277893614e9598cefa9",
+      "sha256": "124a74ba28d9c8b0bff04d6d3cc4aa633f5764dabf9a5d70bf38ac6ff5efd550",
+      "provenanceRecordId": "PROV-FILE-D4E118A3C4B5"
     }
   ],
   "submissionScope": {
