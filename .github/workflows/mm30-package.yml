@@ -16,7 +16,7 @@ jobs:
     env:
       PYTHONDONTWRITEBYTECODE: '1'
       PIP_DISABLE_PIP_VERSION_CHECK: '1'
-      SOURCE: 38c6d60d8863fd17136b3f9e6d6d94b3b6efc8ff
+      SOURCE: c4e62bf97d2e67878bdabb4aa2c499ffe0d4213c
       MAIN: 79ae21607eb4d98188f85ce3c42b8be6eb5688bc
       ANNOUNCEMENT: 80ed73f3b86c32b1cc0139174cad6f390afd39c4
       TARGET: fix/mm22-recording-review-20261012-astra
@@ -36,7 +36,7 @@ jobs:
           "$RUNNER_TEMP/mm30-integration-venv/bin/python" -m pip install --no-cache-dir --only-binary=:all: Pillow==11.3.0
           "$RUNNER_TEMP/mm30-integration-venv/bin/python" -c 'import PIL; print(PIL.__version__); assert PIL.__version__ == "11.3.0"'
           git -C source show "$GITHUB_SHA:.github/diagnostics/mm30_package_adapter.py" > "$RUNNER_TEMP/mm30-package-adapter.py"
-          test "$(shasum -a 256 "$RUNNER_TEMP/mm30-package-adapter.py" | cut -d ' ' -f 1)" = ec8724e66c88e2d6e5ca503ba0a2181f22a6a466c14682b5deaaa1c413f84199
+          test "$(shasum -a 256 "$RUNNER_TEMP/mm30-package-adapter.py" | cut -d ' ' -f 1)" = b7bc1a2818c7909afa0a62b63a8a96ee08fa4d4243e29f0cc338cd9abbc08c18
       - name: Build only the pinned FFprobe inspection tool
         shell: bash
         run: |
