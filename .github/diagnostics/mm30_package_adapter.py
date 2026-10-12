@@ -29,6 +29,9 @@ def replace_once(text: str, before: str, after: str) -> str:
     return text.replace(before, after, 1)
 
 recipe = replace_once(recipe, "BASE = '80ed73f3b86c32b1cc0139174cad6f390afd39c4'", "BASE = os.environ['MM_COMBINED_SOURCE']")
+recipe = replace_once(recipe,
+    "archive = f'release/{VERSION}/history/manifest-{old_manifest_digest}.json'",
+    "archive = f'release/{VERSION}/history/manifest-{old_manifest_digest[:16]}.json'")
 recipe = replace_once(recipe, "    SPEC,\n}", "    SPEC, 'tests/test_recording_handoff_review.py', 'tests/test_producer_go_handoff.py',\n}")
 # A recorded null is an existing exclusion, not permission to erase a digest.
 # Non-null inventory values follow the existing exact-digest path below.
