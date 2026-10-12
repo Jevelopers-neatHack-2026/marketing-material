@@ -48,7 +48,7 @@ jobs:
           git log -4 --format='%H %P %s'
           echo "MM_COMBINED_SOURCE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
           git show "$GITHUB_SHA:.github/diagnostics/mm07_recovery.py" > "$RUNNER_TEMP/mm07-recovery.py"
-          test "$(shasum -a 256 "$RUNNER_TEMP/mm07-recovery.py" | cut -d ' ' -f1)" = 5fd6e49efcd37fff6f8cf734e7f14bde6f42fe7ac5426abc29bb8a58bfc8cd7e
+          test "$(shasum -a 256 "$RUNNER_TEMP/mm07-recovery.py" | cut -d ' ' -f1)" = 8d17a5df0b8d03cd109840981157f29f4629c5a92118555ba9f04281c49dc4b2
       - name: Exact Python environment and generated-source preflight before expensive checks
         shell: bash
         run: |

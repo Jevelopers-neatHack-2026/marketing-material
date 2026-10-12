@@ -174,6 +174,15 @@ def main() -> None:
     updates += "for name in ('demo/human-recording-runbook.md', 'demo/recording-checklist.md', 'docs/collateral-handoff.md'):\n    document = (ROOT / name).read_text(encoding='utf-8')\n    title, rest = document.split('\\n', 1)\n    assert '## Submission window status — closed' not in document\n    (ROOT / name).write_text(title + '\\n' + notice + rest, encoding='utf-8')\n"
     updates += "formats = load('review/official-format-sources.json')\nassert 'availabilitySnapshot' not in formats\nformats['availabilitySnapshot'] = {'sourceId': 'OFFICIAL-NEATHACK-AVAILABILITY-20261012-CLOSED', 'url': 'https://neatlogs.com/hackathon', 'checkedAt': '2026-10-12 UTC', 'status': 'submissions_closed', 'observedText': 'Submissions closed', 'lateEntryException': None, 'submittedEntryEvidence': None, 'interactiveFormExecuted': False, 'scope': 'Public-page availability observation after the displayed 18:25 UTC window; not Discord confirmation, actual entry evidence or permission. Prior format observations are unchanged.'}\ndump('review/official-format-sources.json', formats)\n"
     updates += "command('current-status-corrected', [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_current_handoff_status.py', '-v'])\n"
+    # Run 38297701863 registered the new test, but the inherited recipe only
+    # staged source paths already present in its input index. Include exactly
+    # this new regular file; retain the full index/inventory equality gate.
+    repaired = once(repaired,
+        "for path in SOURCE_PATHS:\n    if path in original_files:\n        subprocess.run(['git', 'add', '--', path], cwd=ROOT, check=True)",
+        "for path in SOURCE_PATHS:\n    if path in original_files or path == " + repr(TEST_PATH) + ":\n        assert (ROOT / path).is_file() and not (ROOT / path).is_symlink(), path\n        subprocess.run(['git', 'add', '--', path], cwd=ROOT, check=True)")
+    repaired = once(repaired,
+        "assert set(by_path) == set(git('ls-files').splitlines()), 'Inventory does not cover exact index'",
+        "indexed_paths = set(git('ls-files').splitlines())\nprint('INVENTORY_INDEX_DELTA', 'unindexed', sorted(set(by_path) - indexed_paths), 'unregistered', sorted(indexed_paths - set(by_path)), flush=True)\nassert set(by_path) == indexed_paths, 'Inventory does not cover exact index'")
     context['recipe'] = repaired
     context['source_updates'] = baseline + context['source_updates'] + updates
     ast.parse(context['source_updates'])
