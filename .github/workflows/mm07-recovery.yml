@@ -2,7 +2,7 @@ name: Isolated marketing package recovery
 on:
   push:
     branches: [diagnostics/mm07-package-recovery-20261012]
-    paths: [.github/workflows/mm07-recovery.yml, .github/diagnostics/mm07_recovery.py]
+    paths: [.github/workflows/mm07-recovery.yml, .github/diagnostics/mm07_recovery.py, .github/diagnostics/mm07_naming_fix.py]
 permissions:
   contents: write
 concurrency:
@@ -47,8 +47,8 @@ jobs:
           if test -s "$RUNNER_TEMP/mm07-new-instructions.txt"; then cat "$RUNNER_TEMP/mm07-new-instructions.txt"; echo 'New instructions require an actual read before edits'; exit 1; fi
           git log -4 --format='%H %P %s'
           echo "MM_COMBINED_SOURCE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
-          git show "$GITHUB_SHA:.github/diagnostics/mm07_recovery.py" > "$RUNNER_TEMP/mm07-recovery.py"
-          test "$(shasum -a 256 "$RUNNER_TEMP/mm07-recovery.py" | cut -d ' ' -f1)" = bb5d9c686b0c5f0578c1a2eee4c6853f0957ef56abac4baaf2cca4adc925184e
+          git show "$GITHUB_SHA:.github/diagnostics/mm07_naming_fix.py" > "$RUNNER_TEMP/mm07-recovery.py"
+          test "$(shasum -a 256 "$RUNNER_TEMP/mm07-recovery.py" | cut -d ' ' -f1)" = 87d0e0352e461ba6e63bf3db35e8f90898eccc024f4740c74654ccd29d0a90af
       - name: Exact Python environment and generated-source preflight before expensive checks
         shell: bash
         run: |
