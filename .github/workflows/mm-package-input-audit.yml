@@ -1,0 +1,62 @@
+name: Read-only package input audit
+on:
+  push:
+    branches: [diagnostics/mm-announcement-checks-20261012-astra]
+    paths: [.github/workflows/mm-package-input-audit.yml]
+permissions: {}
+jobs:
+  inspect:
+    if: github.repository == 'Jevelopers-neatHack-2026/marketing-material' && github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Inspect only public candidate metadata and helper definitions
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --no-checkout https://github.com/Jevelopers-neatHack-2026/marketing-material.git source
+          git -C source checkout --detach 80ed73f3b86c32b1cc0139174cad6f390afd39c4
+          cd source
+          python3 - <<'PY'
+          import ast, json
+          from pathlib import Path
+          paths = {
+              'launch/announcement-copy.md', 'launch/deliverable-briefs.md',
+              'demo/human-recording-runbook.md', 'tests/test_narrative_handoff.py',
+              'tests/test_submission_workflow.py', 'tests/test_announcement_submission.py',
+              'docs/collateral-inventory.json', 'review/provenance.json',
+          }
+          ids = {'LAUNCH-X-COPY-001', 'DEMO-HUMAN-RECORDING-RUNBOOK-001'}
+          docs = [Path('docs/collateral-inventory.json'), Path('review/provenance.json')]
+          docs += list(Path('release').glob('*/package-spec.json'))
+          for path in docs:
+              doc = json.loads(path.read_text())
+              print('\nDOCUMENT', path)
+              print('TOP_LEVEL', json.dumps({k: f'{type(v).__name__}:{len(v)}' if isinstance(v, (list, dict)) else v for k, v in doc.items()}, sort_keys=True))
+              def walk(value, loc='$'):
+                  if isinstance(value, dict):
+                      matched = value.get('assetId') in ids or value.get('path') in paths or value.get('filePath') in paths
+                      serialized = json.dumps(value, ensure_ascii=False, sort_keys=True)
+                      if matched and len(serialized) < 18000:
+                          print('MATCH', loc, serialized)
+                          return
+                      for key, nested in value.items():
+                          if isinstance(nested, (dict, list)):
+                              walk(nested, loc + '.' + key)
+                  elif isinstance(value, list):
+                      for i, nested in enumerate(value):
+                          walk(nested, loc + '[' + str(i) + ']')
+              walk(doc)
+          path = Path('tools/package_collateral.py')
+          source = path.read_text()
+          tree = ast.parse(source)
+          print('\nPACKAGE_HELPERS', [(n.name, n.lineno, n.end_lineno) for n in tree.body if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef))])
+          for node in tree.body:
+              if isinstance(node, ast.FunctionDef) and node.name in {'copy_package_files', 'bind_self_reference', 'main'}:
+                  print('\nDEFINITION', node.name)
+                  print(ast.get_source_segment(source, node))
+          path = Path('tools/validate_collateral.py')
+          tree = ast.parse(path.read_text())
+          print('\nVALIDATION_HELPERS', [(n.name, n.lineno, n.end_lineno) for n in tree.body if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef))])
+          PY
+          git diff --exit-code
