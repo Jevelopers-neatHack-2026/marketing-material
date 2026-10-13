@@ -97,4 +97,4 @@ The full validation sequence is in the [organization guide](docs/collateral-orga
 
 ## Contributing
 
-Follow the [organization contribution guidance](https://github.com/Jevelopers-neatHack-2026/.github/blob/main/CONTRIBUTING.md) and the [messaging checklist](review/messaging-checklist.md) before adding any public sentence. Update the [inventory](docs/collateral-inventory.json) and [provenance register](review/provenance.json) when tracked bytes change, then re-run the checks. No licence is declared for this repository.
+Follow the [organization contribution guidance](https://github.com/Jevelopers-neatHack-2026/.github/blob/main/CONTRIBUTING.md) and the [messaging checklist](review/messaging-checklist.md) before adding any public sentence. Update the [inventory](docs/collateral-inventory.json) and [provenance register](review/provenance.json) when tracked bytes change, then re-run the checks. See the [MIT License](LICENSE) and [COPYRIGHT.md](COPYRIGHT.md) for the exact original-software scope; existing collateral and asset permissions are not replaced.

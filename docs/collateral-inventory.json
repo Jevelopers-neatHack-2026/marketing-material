@@ -2367,12 +2367,12 @@
       "fileId": "DOC-README-001",
       "path": "README.md",
       "classification": "repository_navigation",
-      "pathAvailability": "tracked_at_baseline",
+      "pathAvailability": "created_in_candidate",
       "lifecycleState": "not_applicable",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "16f373f4916334bbf0f5c27ce33b842c62309f5b",
-      "sha256": "7447390f91d4799597f32ab4eea2ab4e82f7716975e83f964f94664d79327647",
+      "trackedAtRevision": "9b38209b9f1ae6ac367d9f85418e73e6146d124d",
+      "sha256": "f96f036d4adcec781510fcac5a991dcaaa116d557e489571f4c98a6c1a1561ad",
       "provenanceRecordId": "PROV-FILE-B33563055168"
     },
     {
@@ -6852,6 +6852,28 @@
       "trackedAtRevision": "944c57b12dd3bff00f46c868400b9e52261715e1",
       "sha256": "b279a99be5905c70e232a2161fe4a0e2dd777efbc7214e683aa3491e0ab6f854",
       "provenanceRecordId": "PROV-FILE-713ADC9BEA87"
+    },
+    {
+      "fileId": "LICENSING-LICENSE",
+      "path": "LICENSE",
+      "classification": "software_licensing_document",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "9b38209b9f1ae6ac367d9f85418e73e6146d124d",
+      "sha256": "e6c004bb7c4f572d39fc64b8a8f1160a7e98507034dc848acfd0bea2e7c41001"
+    },
+    {
+      "fileId": "LICENSING-COPYRIGHT-MD",
+      "path": "COPYRIGHT.md",
+      "classification": "software_licensing_document",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "9b38209b9f1ae6ac367d9f85418e73e6146d124d",
+      "sha256": "5ec5703f76103eb081b51299ef91ccf29bc703a21687c6065543859e98b1ff71"
     }
   ],
   "submissionScope": {

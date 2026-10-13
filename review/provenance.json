@@ -3759,7 +3759,7 @@
       "source": {
         "repo": "Jevelopers-neatHack-2026/marketing-material",
         "path": "README.md",
-        "revision": "sha256:7447390f91d4799597f32ab4eea2ab4e82f7716975e83f964f94664d79327647",
+        "revision": "sha256:f96f036d4adcec781510fcac5a991dcaaa116d557e489571f4c98a6c1a1561ad",
         "revisionKind": "sha256_content_digest",
         "url": null,
         "restrictedOriginalReference": null
@@ -3811,7 +3811,8 @@
         "derivedFrom": [],
         "derivatives": [],
         "transformations": [
-          "Exact candidate file recorded for internal review; no public/release approval inferred."
+          "Exact candidate file recorded for internal review; no public/release approval inferred.",
+          "2026-10-13: licensing navigation/inventory alignment only; existing collateral permissions, blockers and review state preserved."
         ]
       },
       "compositionDependencies": [
@@ -3820,7 +3821,7 @@
       ],
       "checksum": {
         "algorithm": "SHA-256",
-        "value": "7447390f91d4799597f32ab4eea2ab4e82f7716975e83f964f94664d79327647",
+        "value": "f96f036d4adcec781510fcac5a991dcaaa116d557e489571f4c98a6c1a1561ad",
         "status": "Exact SHA-256 content digest of current bytes; pin is external to the source file."
       },
       "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
@@ -6738,7 +6739,7 @@
       "source": {
         "repo": "Jevelopers-neatHack-2026/marketing-material",
         "path": "docs/collateral-inventory.json",
-        "revision": "sha256:baff06479d4a4ea061331d4f98d6c0fe8b91ed6183dc1068cc4e911a6faa8299",
+        "revision": "sha256:93b79fdc54c4fd204981e9d6e3f67ba4cd4dba1fd3235fa909f5788a2e2aac73",
         "revisionKind": "sha256_content_digest",
         "url": null,
         "restrictedOriginalReference": null
@@ -6791,13 +6792,14 @@
         "derivatives": [],
         "transformations": [
           "Exact candidate file recorded for internal review; no public/release approval inferred.",
-          "Exact inventory content digest refreshed after the PR #31 documentation source pins; no publication permission or approval is granted."
+          "Exact inventory content digest refreshed after the PR #31 documentation source pins; no publication permission or approval is granted.",
+          "2026-10-13: licensing navigation/inventory alignment only; existing collateral permissions, blockers and review state preserved."
         ]
       },
       "compositionDependencies": [],
       "checksum": {
         "algorithm": "SHA-256",
-        "value": "baff06479d4a4ea061331d4f98d6c0fe8b91ed6183dc1068cc4e911a6faa8299",
+        "value": "93b79fdc54c4fd204981e9d6e3f67ba4cd4dba1fd3235fa909f5788a2e2aac73",
         "status": "Exact SHA-256 content digest of current inventory bytes; the register is external to this source file."
       },
       "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
