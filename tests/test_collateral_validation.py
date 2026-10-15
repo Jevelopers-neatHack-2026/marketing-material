@@ -167,11 +167,13 @@ class CollateralPolicyValidationTests(unittest.TestCase):
         self.assertEqual([], validate_claims(self.claims))
 
     def test_documentation_review_cannot_approve_a_different_destination_class(self):
-        mutated = copy.deepcopy(self.claims)
-        row = next(row for row in mutated["ctas"] if row["id"] == "CTA-REPOSITORY-DOCS-VISUAL-001")
-        row["destinationClass"] = "product_transaction"
-        self.assertTrue(any(row["id"] in error for error in validate_claims(mutated)))
-        self.assertTrue(any(row["id"] in error and "unpinned" in error for error in selected_collateral_blockers(mutated, self.provenance, ["LAUNCH-X-KEY-VISUAL-001"])))
+        for destination_class in ("product_transaction", "none"):
+            with self.subTest(destination_class=destination_class):
+                mutated = copy.deepcopy(self.claims)
+                row = next(row for row in mutated["ctas"] if row["id"] == "CTA-REPOSITORY-DOCS-VISUAL-001")
+                row["destinationClass"] = destination_class
+                self.assertTrue(any(row["id"] in error for error in validate_claims(mutated)))
+                self.assertTrue(any(row["id"] in error and "unpinned" in error for error in selected_collateral_blockers(mutated, self.provenance, ["LAUNCH-X-KEY-VISUAL-001"])))
 
     def test_unknown_or_revoked_rights_never_allow_publication(self):
         for status in ("unknown", "revoked"):

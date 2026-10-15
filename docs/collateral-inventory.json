@@ -2371,8 +2371,8 @@
       "lifecycleState": "not_applicable",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "sha256:b61eb3b7849b2d6d1ab1c8ab5d0645318dbcd46b700e09b7ead343db82139755",
-      "sha256": "b61eb3b7849b2d6d1ab1c8ab5d0645318dbcd46b700e09b7ead343db82139755",
+      "trackedAtRevision": "sha256:efbcd0d4a486a63e43721b84bc8d9ee357d23a6b5baa1047229d0b8f5cda0299",
+      "sha256": "efbcd0d4a486a63e43721b84bc8d9ee357d23a6b5baa1047229d0b8f5cda0299",
       "provenanceRecordId": "PROV-FILE-B33563055168"
     },
     {
@@ -2877,8 +2877,8 @@
       "lifecycleState": "not_applicable",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "sha256:ecafcf45a20aa3c16de5e200363c34d0845eb833eeb99f729bf7af07b5f989da",
-      "sha256": "ecafcf45a20aa3c16de5e200363c34d0845eb833eeb99f729bf7af07b5f989da",
+      "trackedAtRevision": "sha256:af2d90fa414a6a3cbe240b2aaf06f63716c51115982660f7e6c723dc096268c7",
+      "sha256": "af2d90fa414a6a3cbe240b2aaf06f63716c51115982660f7e6c723dc096268c7",
       "provenanceRecordId": "TEST-COLLATERAL-POLICY-001"
     },
     {
@@ -2925,8 +2925,8 @@
       "lifecycleState": "not_applicable",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "sha256:95f67674046f4485b12446883057e9d4d190363741aebdb95303e05342b94d3a",
-      "sha256": "95f67674046f4485b12446883057e9d4d190363741aebdb95303e05342b94d3a",
+      "trackedAtRevision": "sha256:61603ea3f2099be9119415187ae6b887a65c46e2bade94a8f192622227672301",
+      "sha256": "61603ea3f2099be9119415187ae6b887a65c46e2bade94a8f192622227672301",
       "provenanceRecordId": "VALIDATOR-COLLATERAL-001"
     },
     {
@@ -3381,8 +3381,8 @@
       "lifecycleState": "draft",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "sha256:17a9b93f620b166dfdee6a973d9b813fda4e94cf4d8ec3fb10acaa3b9a428f00",
-      "sha256": "17a9b93f620b166dfdee6a973d9b813fda4e94cf4d8ec3fb10acaa3b9a428f00",
+      "trackedAtRevision": "sha256:6b482ffa46dcf6266473f252d9ee51fae86e127036b808dd6d8945206a45656b",
+      "sha256": "6b482ffa46dcf6266473f252d9ee51fae86e127036b808dd6d8945206a45656b",
       "provenanceRecordId": "DEMO-RECORDING-CHECKLIST-001"
     },
     {
@@ -3441,8 +3441,8 @@
       "lifecycleState": "not_applicable",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "sha256:a0dd8f4b84d6b95d60b4c2498f2659c8214ab0fcc93944e6b093bab96bf24fc1",
-      "sha256": "a0dd8f4b84d6b95d60b4c2498f2659c8214ab0fcc93944e6b093bab96bf24fc1",
+      "trackedAtRevision": "sha256:70e1a8074b74daa74d879100e1936ff8bf7ab6e3992780ec2f3f138df2c70dd4",
+      "sha256": "70e1a8074b74daa74d879100e1936ff8bf7ab6e3992780ec2f3f138df2c70dd4",
       "provenanceRecordId": "HANDOFF-GUIDE-001"
     },
     {
@@ -3453,8 +3453,8 @@
       "lifecycleState": "draft",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "sha256:184a1a1a321334866adf310df336b09cee5b7f02cd5d26fb62fb1e9ed6eed2da",
-      "sha256": "184a1a1a321334866adf310df336b09cee5b7f02cd5d26fb62fb1e9ed6eed2da",
+      "trackedAtRevision": "sha256:e4e27b9f9cd2d76f29cf2372a3b8558a9055227d9facefbbdacbc5da86bd0acd",
+      "sha256": "e4e27b9f9cd2d76f29cf2372a3b8558a9055227d9facefbbdacbc5da86bd0acd",
       "provenanceRecordId": "LAUNCH-X-COPY-001"
     },
     {
@@ -3465,8 +3465,8 @@
       "lifecycleState": "draft",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "sha256:84476f5810ca4db7382970efad76f661572cb0d9b1b59ca8a6c0eb246ac2d231",
-      "sha256": "84476f5810ca4db7382970efad76f661572cb0d9b1b59ca8a6c0eb246ac2d231",
+      "trackedAtRevision": "sha256:6d1b8f182889d685d9d3c336f9ebf7402145d2e0aae710db86866776bd4c27e4",
+      "sha256": "6d1b8f182889d685d9d3c336f9ebf7402145d2e0aae710db86866776bd4c27e4",
       "provenanceRecordId": "PROV-FILE-B9AC31BA1594"
     },
     {
@@ -3741,8 +3741,8 @@
       "lifecycleState": "not_applicable",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "sha256:6abcbc57290177606303ff533485a738f7d2e647bb9d781eb621f013e7eddc45",
-      "sha256": "6abcbc57290177606303ff533485a738f7d2e647bb9d781eb621f013e7eddc45",
+      "trackedAtRevision": "sha256:b344bcd468bda39c6b7b859998c555d5c2cca5c71e624988432645d67b7ea66c",
+      "sha256": "b344bcd468bda39c6b7b859998c555d5c2cca5c71e624988432645d67b7ea66c",
       "provenanceRecordId": "PROV-FILE-C8093907B9B9"
     },
     {
@@ -4653,8 +4653,8 @@
       "lifecycleState": "not_applicable",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "sha256:7f600ec606f383163bae4ddcb137638531a83cf4b9b2c56af67afdaabf1f9c29",
-      "sha256": "7f600ec606f383163bae4ddcb137638531a83cf4b9b2c56af67afdaabf1f9c29",
+      "trackedAtRevision": "sha256:8b270ee10e6a7903d7ac135459ab83cc546bdab9c2003b47158d549bafbce21d",
+      "sha256": "8b270ee10e6a7903d7ac135459ab83cc546bdab9c2003b47158d549bafbce21d",
       "provenanceRecordId": "PROV-FILE-2A535BD0A4EB"
     },
     {
@@ -6009,8 +6009,8 @@
       "lifecycleState": "draft",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "sha256:f4ca6bb0f20a1b3bffe0e36f9ac5d7a4a8b6642cc6594794cb5655f637a6ce35",
-      "sha256": "f4ca6bb0f20a1b3bffe0e36f9ac5d7a4a8b6642cc6594794cb5655f637a6ce35",
+      "trackedAtRevision": "sha256:9370dc6dd37e2e88b8d13962ddfb5f38c64ebf1c3a079c6b3c0fde8a9d11e874",
+      "sha256": "9370dc6dd37e2e88b8d13962ddfb5f38c64ebf1c3a079c6b3c0fde8a9d11e874",
       "provenanceRecordId": "DEMO-HUMAN-RECORDING-RUNBOOK-001"
     },
     {
@@ -7440,6 +7440,282 @@
       "trackedAtRevision": "sha256:def05df0028adcaaac4f22612cb8b925cc9f22c310691c20abbc21e78cf78770",
       "sha256": "def05df0028adcaaac4f22612cb8b925cc9f22c310691c20abbc21e78cf78770",
       "provenanceRecordId": "PROV-FILE-173B13A068E6"
+    },
+    {
+      "fileId": "FILE-55C45C24D9D0",
+      "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-explainer-001-r11-repository-internal-review-text-en-us-concept-explainer.md",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:466d020a4d8d3e13a3b870a8bac5508b43e1d36bded53f574ecb00f7287de75a",
+      "sha256": "466d020a4d8d3e13a3b870a8bac5508b43e1d36bded53f574ecb00f7287de75a",
+      "provenanceRecordId": "PROV-FILE-55C45C24D9D0"
+    },
+    {
+      "fileId": "FILE-CB885C812639",
+      "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-human-recording-runbook-001-r11-repository-internal-review-text-en-us-planned-internal-human-guide.md",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:9370dc6dd37e2e88b8d13962ddfb5f38c64ebf1c3a079c6b3c0fde8a9d11e874",
+      "sha256": "9370dc6dd37e2e88b8d13962ddfb5f38c64ebf1c3a079c6b3c0fde8a9d11e874",
+      "provenanceRecordId": "PROV-FILE-CB885C812639"
+    },
+    {
+      "fileId": "FILE-CB37B01CDA33",
+      "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-narration-001-r11-repository-internal-review-text-en-us-caption-exact-rehearsal-narration.md",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:818dcf3f2796bd2a29a2f3597d2a0fcc36b36fd7e87e50454af94616058e5cf6",
+      "sha256": "818dcf3f2796bd2a29a2f3597d2a0fcc36b36fd7e87e50454af94616058e5cf6",
+      "provenanceRecordId": "PROV-FILE-CB37B01CDA33"
+    },
+    {
+      "fileId": "FILE-81BACDFE5A06",
+      "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-recording-checklist-001-r11-repository-internal-review-text-en-us-rehearsal-recording-plan.md",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:6b482ffa46dcf6266473f252d9ee51fae86e127036b808dd6d8945206a45656b",
+      "sha256": "6b482ffa46dcf6266473f252d9ee51fae86e127036b808dd6d8945206a45656b",
+      "provenanceRecordId": "PROV-FILE-81BACDFE5A06"
+    },
+    {
+      "fileId": "FILE-4B48B044335D",
+      "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-rehearsal-captions-001-r11-repository-internal-review-text-en-us-silent-rehearsal-captions.srt",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:efb9159af59e22b5fa2f7781ed25e1bda245ee833eb09662c435ab19e197a610",
+      "sha256": "efb9159af59e22b5fa2f7781ed25e1bda245ee833eb09662c435ab19e197a610",
+      "provenanceRecordId": "PROV-FILE-4B48B044335D"
+    },
+    {
+      "fileId": "FILE-FD251064B2CB",
+      "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-rehearsal-captions-001-r11-repository-internal-review-text-en-us-silent-rehearsal-captions.vtt",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:acd7579f4471f06fee0d7949185e4e000760f35f0a931fdad24eab29fc2a3322",
+      "sha256": "acd7579f4471f06fee0d7949185e4e000760f35f0a931fdad24eab29fc2a3322",
+      "provenanceRecordId": "PROV-FILE-FD251064B2CB"
+    },
+    {
+      "fileId": "FILE-CA4BFE997506",
+      "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-rehearsal-scenes-001-r11-repository-internal-review-text-en-us-silent-rehearsal-scene-map.json",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:2dcc324c4e41cd5b103b2630774ac08cc771e811e17219026b7204f4bef32fca",
+      "sha256": "2dcc324c4e41cd5b103b2630774ac08cc771e811e17219026b7204f4bef32fca",
+      "provenanceRecordId": "PROV-FILE-CA4BFE997506"
+    },
+    {
+      "fileId": "FILE-0189092E7C2A",
+      "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-rehearsal-transcript-001-r11-repository-internal-review-text-en-us-caption-exact-transcript.md",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:36792f4d4ac8389dd9853be5a54d5ac2672c527f3984d1ac3dc28018ae3f385e",
+      "sha256": "36792f4d4ac8389dd9853be5a54d5ac2672c527f3984d1ac3dc28018ae3f385e",
+      "provenanceRecordId": "PROV-FILE-0189092E7C2A"
+    },
+    {
+      "fileId": "FILE-8DE18797388C",
+      "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-rehearsal-video-001-r11-repository-internal-review-1280x720-en-us-silent-concept-rehearsal.mp4",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:c2bc7ca195d9be07c7cc007c4cdd5e1cf7b7d2ebc5530f64e2d441c6288f9ace",
+      "sha256": "c2bc7ca195d9be07c7cc007c4cdd5e1cf7b7d2ebc5530f64e2d441c6288f9ace",
+      "provenanceRecordId": "PROV-FILE-8DE18797388C"
+    },
+    {
+      "fileId": "FILE-8316EB54AA63",
+      "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-storyboard-001-r11-repository-internal-review-text-en-us-150-second-rehearsal-plan.md",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:b8dfd4d468fdf8f61ac6463d2bb99a54190c7254588159add6b1f12a19d17467",
+      "sha256": "b8dfd4d468fdf8f61ac6463d2bb99a54190c7254588159add6b1f12a19d17467",
+      "provenanceRecordId": "PROV-FILE-8316EB54AA63"
+    },
+    {
+      "fileId": "FILE-337FCB8E422C",
+      "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-submission-narrative-001-r11-repository-internal-review-text-en-us-submission-preflight.md",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:5a3a3e16035268426447c585fecfcec4a6fd988d35b936f74f38a090ea069635",
+      "sha256": "5a3a3e16035268426447c585fecfcec4a6fd988d35b936f74f38a090ea069635",
+      "provenanceRecordId": "PROV-FILE-337FCB8E422C"
+    },
+    {
+      "fileId": "FILE-1A379EFA9C7B",
+      "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-workflow-diagram-001-r11-repository-internal-review-1440x900-en-us-concept-workflow-presentation-png.png",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:9e69d9fe1c6a097ef26fc6eefa473c4fee4b5bca8f075392740698988f6355fe",
+      "sha256": "9e69d9fe1c6a097ef26fc6eefa473c4fee4b5bca8f075392740698988f6355fe",
+      "provenanceRecordId": "PROV-FILE-1A379EFA9C7B"
+    },
+    {
+      "fileId": "FILE-1F29E7BC8F24",
+      "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-workflow-diagram-001-r11-repository-internal-review-1440x900-en-us-concept-workflow-vector.svg",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:df5df2078aee74fb36bfe4ed6fc572db5217d2a9a64c47b984e05e19acbf0971",
+      "sha256": "df5df2078aee74fb36bfe4ed6fc572db5217d2a9a64c47b984e05e19acbf0971",
+      "provenanceRecordId": "PROV-FILE-1F29E7BC8F24"
+    },
+    {
+      "fileId": "FILE-FAD949F555E7",
+      "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-workflow-diagram-001-r11-repository-internal-review-text-en-us-concept-workflow-alt-text.md",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:9e635bd37e6c7490971cb14c65d149201973dbc1ad40fb7af018476174ca0ad1",
+      "sha256": "9e635bd37e6c7490971cb14c65d149201973dbc1ad40fb7af018476174ca0ad1",
+      "provenanceRecordId": "PROV-FILE-FAD949F555E7"
+    },
+    {
+      "fileId": "FILE-99A52C4D7AE7",
+      "path": "release/v0.1.0-rehearsal/assets/screenshot-001-demo-screenshot-set-001-r11-repository-internal-review-1200x900-en-us-fictional-stub-concept-presentation-png.png",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:dc78487e912bd973681af285980fe87b631ca44e6656f981e169f4a284ffd578",
+      "sha256": "dc78487e912bd973681af285980fe87b631ca44e6656f981e169f4a284ffd578",
+      "provenanceRecordId": "PROV-FILE-99A52C4D7AE7"
+    },
+    {
+      "fileId": "FILE-7910F80F3EA0",
+      "path": "release/v0.1.0-rehearsal/assets/screenshot-001-demo-screenshot-set-001-r11-repository-internal-review-1200x900-en-us-fictional-stub-concept-vector.svg",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:2e0109baed36145184f7a75ae5a2e6b5637221dd1ebeb46c7111f0d5cec34df2",
+      "sha256": "2e0109baed36145184f7a75ae5a2e6b5637221dd1ebeb46c7111f0d5cec34df2",
+      "provenanceRecordId": "PROV-FILE-7910F80F3EA0"
+    },
+    {
+      "fileId": "FILE-070F11D8AAA4",
+      "path": "release/v0.1.0-rehearsal/assets/screenshot-001-demo-screenshot-set-001-r11-repository-internal-review-text-en-us-fictional-stub-concept-alt-text.md",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:80886891c077c685ee0080a85691ad83dc04f13fae0be55462647bda906fc186",
+      "sha256": "80886891c077c685ee0080a85691ad83dc04f13fae0be55462647bda906fc186",
+      "provenanceRecordId": "PROV-FILE-070F11D8AAA4"
+    },
+    {
+      "fileId": "FILE-C6A40971E83F",
+      "path": "release/v0.1.0-rehearsal/assets/social-001-launch-x-alt-text-001-r11-repository-internal-review-text-en-us-concept-announcement-alt-text.md",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:b2a1476a5138d702cf59b544944ef78ccf567c000d432ae2e60729ed77bac554",
+      "sha256": "b2a1476a5138d702cf59b544944ef78ccf567c000d432ae2e60729ed77bac554",
+      "provenanceRecordId": "PROV-FILE-C6A40971E83F"
+    },
+    {
+      "fileId": "FILE-1E91B26A0970",
+      "path": "release/v0.1.0-rehearsal/assets/social-001-launch-x-copy-001-r11-repository-internal-review-text-en-us-pending-template-and-docs-update.md",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:e4e27b9f9cd2d76f29cf2372a3b8558a9055227d9facefbbdacbc5da86bd0acd",
+      "sha256": "e4e27b9f9cd2d76f29cf2372a3b8558a9055227d9facefbbdacbc5da86bd0acd",
+      "provenanceRecordId": "PROV-FILE-1E91B26A0970"
+    },
+    {
+      "fileId": "FILE-8B6F5E160D09",
+      "path": "release/v0.1.0-rehearsal/assets/social-001-launch-x-key-visual-001-r11-repository-internal-review-1200x675-en-us-concept-announcement-1200x675-png.png",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:7b0fd59eaa903c4765cdabbc47a9ddc2202cc010d3ac3169d51dafda40c262ee",
+      "sha256": "7b0fd59eaa903c4765cdabbc47a9ddc2202cc010d3ac3169d51dafda40c262ee",
+      "provenanceRecordId": "PROV-FILE-8B6F5E160D09"
+    },
+    {
+      "fileId": "FILE-E8F1282B4FCB",
+      "path": "release/v0.1.0-rehearsal/assets/social-001-launch-x-key-visual-001-r11-repository-internal-review-1200x675-en-us-concept-announcement-vector.svg",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:a900eaa6f9ba444160761910b791a5044cd6fb50fa510721c760142fb1fd4699",
+      "sha256": "a900eaa6f9ba444160761910b791a5044cd6fb50fa510721c760142fb1fd4699",
+      "provenanceRecordId": "PROV-FILE-E8F1282B4FCB"
+    },
+    {
+      "fileId": "FILE-B265BA032682",
+      "path": "release/v0.1.0-rehearsal/history/manifest-6952747c6781ee09.json",
+      "classification": "validation_test",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:6952747c6781ee09f76e6f0bbdd729fc53684043c99f86fdd4e0d14c6e4dead0",
+      "sha256": "6952747c6781ee09f76e6f0bbdd729fc53684043c99f86fdd4e0d14c6e4dead0",
+      "provenanceRecordId": "PROV-FILE-B265BA032682"
+    },
+    {
+      "fileId": "FILE-E76C1DC8543E",
+      "path": "release/v0.1.0-rehearsal/view/demo/deck/deck-001-demo-deck-support-001-r11-repository-internal-review-responsive-en-us-concept-responsive-html.html",
+      "classification": "internal_package_copy",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:def05df0028adcaaac4f22612cb8b925cc9f22c310691c20abbc21e78cf78770",
+      "sha256": "def05df0028adcaaac4f22612cb8b925cc9f22c310691c20abbc21e78cf78770",
+      "provenanceRecordId": "PROV-FILE-E76C1DC8543E"
     }
   ],
   "submissionScope": {

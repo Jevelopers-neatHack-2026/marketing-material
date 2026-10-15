@@ -535,7 +535,7 @@ def validate_claims(ledger: dict[str, Any]) -> list[str]:
                     errors.append(f"{identifier}: confirmed local-file route requires reviewer and routeReviewDate")
             else:
                 errors.append(f"{identifier}: CTA cannot be approved without a confirmed destination-owner route")
-        if row.get("destinationClass") != "none" and availability.get("status") == "confirmed_for_pinned_documentation_only":
+        if availability.get("status") == "confirmed_for_pinned_documentation_only":
             target = row.get("target")
             if row.get("destinationClass") != "public_repository_documentation" or not _pinned_documentation_target(target):
                 errors.append(f"{identifier}: confirmed repository CTA requires an exact public documentation target pinned to a full commit")
