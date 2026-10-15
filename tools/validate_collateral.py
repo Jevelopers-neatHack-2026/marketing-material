@@ -385,6 +385,27 @@ def _unsafe_positive_copy(text: str) -> list[str]:
     return problems
 
 
+def _pinned_documentation_target(target: Any) -> bool:
+    """Accept an exact GitHub blob locator, never a moving branch or route."""
+    if not isinstance(target, str) or any(character.isspace() for character in target):
+        return False
+    try:
+        parsed = urlsplit(target)
+    except ValueError:
+        return False
+    if parsed.scheme != "https" or parsed.netloc != "github.com" or parsed.query or parsed.fragment:
+        return False
+    parts = parsed.path.split("/")
+    return (
+        len(parts) >= 6
+        and parts[0] == ""
+        and all(re.fullmatch(r"[A-Za-z0-9_.-]+", part) and part not in {".", ".."} for part in parts[1:3])
+        and parts[3] == "blob"
+        and HEX40.fullmatch(parts[4]) is not None
+        and all(part and part not in {".", ".."} and unquote(part) == part and "\\" not in part for part in parts[5:])
+    )
+
+
 def validate_claims(ledger: dict[str, Any]) -> list[str]:
     errors: list[str] = []
     if ledger.get("schemaVersion") != "1.0":
@@ -516,8 +537,8 @@ def validate_claims(ledger: dict[str, Any]) -> list[str]:
                 errors.append(f"{identifier}: CTA cannot be approved without a confirmed destination-owner route")
         if row.get("destinationClass") != "none" and availability.get("status") == "confirmed_for_pinned_documentation_only":
             target = row.get("target")
-            if not isinstance(target, str) or not target.startswith("https://github.com/"):
-                errors.append(f"{identifier}: confirmed repository CTA requires an exact public documentation target")
+            if row.get("destinationClass") != "public_repository_documentation" or not _pinned_documentation_target(target):
+                errors.append(f"{identifier}: confirmed repository CTA requires an exact public documentation target pinned to a full commit")
         if row.get("availability", {}).get("status") == "unavailable_unconfirmed" and row.get("target") is not None:
             errors.append(f"{identifier}: unavailable CTA must not carry a promoted target")
 
@@ -1691,7 +1712,7 @@ def _cta_blockers(cta: dict[str, Any]) -> list[str]:
     availability = cta.get("availability", {})
     target = cta.get("target")
     if cta.get("routeReview") == "confirmed_by_assigned_supervisor_for_repository_docs_only":
-        if availability.get("status") != "confirmed_for_pinned_documentation_only" or not isinstance(target, str) or not target.startswith("https://github.com/"):
+        if availability.get("status") != "confirmed_for_pinned_documentation_only" or cta.get("destinationClass") != "public_repository_documentation" or not _pinned_documentation_target(target):
             problems.append(f"{identifier}: repository documentation target is unavailable or unpinned")
     elif cta.get("routeReview") == "confirmed_static_repository_file_only":
         if (

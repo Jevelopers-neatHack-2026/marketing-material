@@ -3759,7 +3759,7 @@
       "source": {
         "repo": "Jevelopers-neatHack-2026/marketing-material",
         "path": "README.md",
-        "revision": "sha256:7447390f91d4799597f32ab4eea2ab4e82f7716975e83f964f94664d79327647",
+        "revision": "sha256:2eef145783f7fcd99371daf67db9a923f2b7548d23d0537298e01af8c7b3a116",
         "revisionKind": "sha256_content_digest",
         "url": null,
         "restrictedOriginalReference": null
@@ -3811,7 +3811,8 @@
         "derivedFrom": [],
         "derivatives": [],
         "transformations": [
-          "Exact candidate file recorded for internal review; no public/release approval inferred."
+          "Exact candidate file recorded for internal review; no public/release approval inferred.",
+          "2026-10-15 exact-byte join refresh for merged source or claim-validator repair; existing approvals do not extend to changed bytes."
         ]
       },
       "compositionDependencies": [
@@ -3820,7 +3821,7 @@
       ],
       "checksum": {
         "algorithm": "SHA-256",
-        "value": "7447390f91d4799597f32ab4eea2ab4e82f7716975e83f964f94664d79327647",
+        "value": "2eef145783f7fcd99371daf67db9a923f2b7548d23d0537298e01af8c7b3a116",
         "status": "Exact SHA-256 content digest of current bytes; pin is external to the source file."
       },
       "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
@@ -6077,7 +6078,7 @@
       "source": {
         "repo": "Jevelopers-neatHack-2026/marketing-material",
         "path": "demo/recording-checklist.md",
-        "revision": "sha256:8193d82268d36030d6433ddedd6b350f657216527fc82dc46c1dd0f043947a74",
+        "revision": "sha256:a5bc24e439a7c24fc68917e65875e3c056138fbeb56bc21d1218858e4fcd07b3",
         "revisionKind": "sha256_content_digest",
         "url": null,
         "restrictedOriginalReference": null
@@ -6138,13 +6139,14 @@
           "PROV-FILE-8C79223FD344"
         ],
         "transformations": [
-          "Exact candidate file recorded for internal review; no public/release approval inferred."
+          "Exact candidate file recorded for internal review; no public/release approval inferred.",
+          "2026-10-15 exact-byte join refresh for merged source or claim-validator repair; existing approvals do not extend to changed bytes."
         ]
       },
       "compositionDependencies": [],
       "checksum": {
         "algorithm": "SHA-256",
-        "value": "8193d82268d36030d6433ddedd6b350f657216527fc82dc46c1dd0f043947a74",
+        "value": "a5bc24e439a7c24fc68917e65875e3c056138fbeb56bc21d1218858e4fcd07b3",
         "status": "Exact SHA-256 content digest of current bytes; pin is external to the source file."
       },
       "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
@@ -6662,7 +6664,7 @@
       "source": {
         "repo": "Jevelopers-neatHack-2026/marketing-material",
         "path": "docs/collateral-handoff.md",
-        "revision": "sha256:daea625218e0969b10d094f64ed7bbd5d531efcf147e0b3737472d00a50167f8",
+        "revision": "sha256:eafdf095c5d6be982eb3a17420e25e7d3924ad26c34c9206f78c526977598c56",
         "revisionKind": "sha256_content_digest",
         "url": null,
         "restrictedOriginalReference": null
@@ -6714,13 +6716,15 @@
         "derivedFrom": [],
         "derivatives": [],
         "transformations": [
-          "Exact candidate file recorded for internal review; no public/release approval inferred."
+          "Exact candidate file recorded for internal review; no public/release approval inferred.",
+          "2026-10-15 exact-byte join refresh for merged source or claim-validator repair; existing approvals do not extend to changed bytes.",
+          "2026-10-15 exact-byte join refresh for merged source or claim-validator repair; existing approvals do not extend to changed bytes."
         ]
       },
       "compositionDependencies": [],
       "checksum": {
         "algorithm": "SHA-256",
-        "value": "daea625218e0969b10d094f64ed7bbd5d531efcf147e0b3737472d00a50167f8",
+        "value": "eafdf095c5d6be982eb3a17420e25e7d3924ad26c34c9206f78c526977598c56",
         "status": "Exact SHA-256 content digest of current source bytes; source revision binds these exact bytes."
       },
       "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
@@ -6738,7 +6742,7 @@
       "source": {
         "repo": "Jevelopers-neatHack-2026/marketing-material",
         "path": "docs/collateral-inventory.json",
-        "revision": "sha256:baff06479d4a4ea061331d4f98d6c0fe8b91ed6183dc1068cc4e911a6faa8299",
+        "revision": "sha256:42258f9c3ddd4446d39a6c11eff2ce3063ddc7899223f0644fdb237b4d334a7f",
         "revisionKind": "sha256_content_digest",
         "url": null,
         "restrictedOriginalReference": null
@@ -6797,7 +6801,7 @@
       "compositionDependencies": [],
       "checksum": {
         "algorithm": "SHA-256",
-        "value": "baff06479d4a4ea061331d4f98d6c0fe8b91ed6183dc1068cc4e911a6faa8299",
+        "value": "42258f9c3ddd4446d39a6c11eff2ce3063ddc7899223f0644fdb237b4d334a7f",
         "status": "Exact SHA-256 content digest of current inventory bytes; the register is external to this source file."
       },
       "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
@@ -6891,9 +6895,9 @@
       "source": {
         "repo": "Jevelopers-neatHack-2026/marketing-material",
         "path": "launch/announcement-copy.md",
-        "revision": "be44ba590575d8d3e3a72aafda6e2353bb333adc",
-        "revisionKind": "git_commit",
-        "url": "https://github.com/Jevelopers-neatHack-2026/marketing-material/blob/be44ba590575d8d3e3a72aafda6e2353bb333adc/launch/announcement-copy.md",
+        "revision": "sha256:184a1a1a321334866adf310df336b09cee5b7f02cd5d26fb62fb1e9ed6eed2da",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
         "restrictedOriginalReference": null
       },
       "createdAt": "2026-10-11",
@@ -6950,13 +6954,14 @@
           "PROV-FILE-99AA3AF318DC"
         ],
         "transformations": [
-          "Exact candidate file recorded for internal review; no public/release approval inferred."
+          "Exact candidate file recorded for internal review; no public/release approval inferred.",
+          "2026-10-15 exact-byte join refresh for merged source or claim-validator repair; existing approvals do not extend to changed bytes."
         ]
       },
       "compositionDependencies": [],
       "checksum": {
         "algorithm": "SHA-256",
-        "value": "31b61fceca4012e66054ce44d358042d5abe47ef5319b02e8a479218bbf36526",
+        "value": "184a1a1a321334866adf310df336b09cee5b7f02cd5d26fb62fb1e9ed6eed2da",
         "status": "Computed from exact current bytes; source pin is the immutable commit containing these exact bytes."
       },
       "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
@@ -6974,9 +6979,9 @@
       "source": {
         "repo": "Jevelopers-neatHack-2026/marketing-material",
         "path": "launch/deliverable-briefs.md",
-        "revision": "be44ba590575d8d3e3a72aafda6e2353bb333adc",
-        "revisionKind": "git_commit",
-        "url": "https://github.com/Jevelopers-neatHack-2026/marketing-material/blob/be44ba590575d8d3e3a72aafda6e2353bb333adc/launch/deliverable-briefs.md",
+        "revision": "sha256:84476f5810ca4db7382970efad76f661572cb0d9b1b59ca8a6c0eb246ac2d231",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
         "restrictedOriginalReference": null
       },
       "createdAt": "2026-10-11",
@@ -7024,13 +7029,14 @@
         "derivedFrom": [],
         "derivatives": [],
         "transformations": [
-          "Exact candidate file recorded for internal review; no public/release approval inferred."
+          "Exact candidate file recorded for internal review; no public/release approval inferred.",
+          "2026-10-15 exact-byte join refresh for merged source or claim-validator repair; existing approvals do not extend to changed bytes."
         ]
       },
       "compositionDependencies": [],
       "checksum": {
         "algorithm": "SHA-256",
-        "value": "5360e3f516231e3cfece441cd31f31c223d43aad964cbe290dc03519b6a46634",
+        "value": "84476f5810ca4db7382970efad76f661572cb0d9b1b59ca8a6c0eb246ac2d231",
         "status": "Computed from exact current bytes; source pin is the immutable commit containing these exact bytes."
       },
       "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
@@ -8929,9 +8935,9 @@
       "source": {
         "repo": "Jevelopers-neatHack-2026/marketing-material",
         "path": "release/v0.1.0-rehearsal/package-spec.json",
-        "revision": "16f373f4916334bbf0f5c27ce33b842c62309f5b",
-        "revisionKind": "git_commit",
-        "url": "https://github.com/Jevelopers-neatHack-2026/marketing-material/blob/16f373f4916334bbf0f5c27ce33b842c62309f5b/release/v0.1.0-rehearsal/package-spec.json",
+        "revision": "sha256:ff3019999c1d751f1614235fa80353fda17060951362fb09732fc1fa020337da",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
         "restrictedOriginalReference": null
       },
       "createdAt": "2026-10-11",
@@ -8981,13 +8987,15 @@
         "derivedFrom": [],
         "derivatives": [],
         "transformations": [
-          "Exact candidate file recorded for internal review; no public/release approval inferred."
+          "Exact candidate file recorded for internal review; no public/release approval inferred.",
+          "2026-10-15 exact-byte join refresh for merged source or claim-validator repair; existing approvals do not extend to changed bytes.",
+          "2026-10-15 exact-byte join refresh for merged source or claim-validator repair; existing approvals do not extend to changed bytes."
         ]
       },
       "compositionDependencies": [],
       "checksum": {
         "algorithm": "SHA-256",
-        "value": "3141cfe9165b868bbf4a845a4cc5d3cf1c4280d6c6691885897ddbc0236c4eaf",
+        "value": "ff3019999c1d751f1614235fa80353fda17060951362fb09732fc1fa020337da",
         "status": "Exact SHA-256 content digest of current source bytes; source revision binds these exact bytes."
       },
       "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
@@ -15233,7 +15241,7 @@
       "source": {
         "repo": "Jevelopers-neatHack-2026/marketing-material",
         "path": "tests/test_collateral_validation.py",
-        "revision": "sha256:57c4450541a318b6e9e49409973fe23e1c54fafc4e418d0a150526727bb90e17",
+        "revision": "sha256:ecafcf45a20aa3c16de5e200363c34d0845eb833eeb99f729bf7af07b5f989da",
         "revisionKind": "sha256_content_digest",
         "url": null,
         "restrictedOriginalReference": null
@@ -15285,13 +15293,15 @@
         "derivedFrom": [],
         "derivatives": [],
         "transformations": [
-          "Exact candidate file recorded for internal review; no public/release approval inferred."
+          "Exact candidate file recorded for internal review; no public/release approval inferred.",
+          "2026-10-15 exact-byte join refresh for merged source or claim-validator repair; existing approvals do not extend to changed bytes.",
+          "2026-10-15 exact-byte join refresh for merged source or claim-validator repair; existing approvals do not extend to changed bytes."
         ]
       },
       "compositionDependencies": [],
       "checksum": {
         "algorithm": "SHA-256",
-        "value": "57c4450541a318b6e9e49409973fe23e1c54fafc4e418d0a150526727bb90e17",
+        "value": "ecafcf45a20aa3c16de5e200363c34d0845eb833eeb99f729bf7af07b5f989da",
         "status": "Exact SHA-256 content digest of current bytes; pin is external to the source file."
       },
       "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
@@ -15841,7 +15851,7 @@
       "source": {
         "repo": "Jevelopers-neatHack-2026/marketing-material",
         "path": "tools/validate_collateral.py",
-        "revision": "sha256:4fddb0beb10e8bca4766c7e93251331f8ec2116a5d620a511c250e9d151e1c5f",
+        "revision": "sha256:95f67674046f4485b12446883057e9d4d190363741aebdb95303e05342b94d3a",
         "revisionKind": "sha256_content_digest",
         "url": null,
         "restrictedOriginalReference": null
@@ -15893,13 +15903,15 @@
         "derivedFrom": [],
         "derivatives": [],
         "transformations": [
-          "Exact candidate file recorded for internal review; no public/release approval inferred."
+          "Exact candidate file recorded for internal review; no public/release approval inferred.",
+          "2026-10-15 exact-byte join refresh for merged source or claim-validator repair; existing approvals do not extend to changed bytes.",
+          "2026-10-15 exact-byte join refresh for merged source or claim-validator repair; existing approvals do not extend to changed bytes."
         ]
       },
       "compositionDependencies": [],
       "checksum": {
         "algorithm": "SHA-256",
-        "value": "4fddb0beb10e8bca4766c7e93251331f8ec2116a5d620a511c250e9d151e1c5f",
+        "value": "95f67674046f4485b12446883057e9d4d190363741aebdb95303e05342b94d3a",
         "status": "Exact SHA-256 content digest of current bytes; pin is external to the source file."
       },
       "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
@@ -15917,9 +15929,9 @@
       "source": {
         "repo": "Jevelopers-neatHack-2026/marketing-material",
         "path": "launch/announcement-copy.md",
-        "revision": "be44ba590575d8d3e3a72aafda6e2353bb333adc",
-        "revisionKind": "git_commit",
-        "url": "https://github.com/Jevelopers-neatHack-2026/marketing-material/blob/be44ba590575d8d3e3a72aafda6e2353bb333adc/launch/announcement-copy.md",
+        "revision": "sha256:184a1a1a321334866adf310df336b09cee5b7f02cd5d26fb62fb1e9ed6eed2da",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
         "restrictedOriginalReference": null
       },
       "createdAt": "2026-10-11",
@@ -15965,13 +15977,14 @@
         "derivedFrom": [],
         "derivatives": [],
         "transformations": [
-          "Canonical exact-output record; draft and nonpublishable."
+          "Canonical exact-output record; draft and nonpublishable.",
+          "2026-10-15 exact-byte join refresh for merged source or claim-validator repair; existing approvals do not extend to changed bytes."
         ]
       },
       "compositionDependencies": [],
       "checksum": {
         "algorithm": "SHA-256",
-        "value": "31b61fceca4012e66054ce44d358042d5abe47ef5319b02e8a479218bbf36526",
+        "value": "184a1a1a321334866adf310df336b09cee5b7f02cd5d26fb62fb1e9ed6eed2da",
         "status": "Computed from exact current bytes; source pin is the immutable commit containing these exact bytes."
       },
       "reviewer": "User-assigned marketing-material supervisor; source-owner and independent approvals pending.",
@@ -24523,7 +24536,7 @@
       "source": {
         "repo": "Jevelopers-neatHack-2026/marketing-material",
         "path": "demo/human-recording-runbook.md",
-        "revision": "sha256:90ba5a954549b324215ca2b8c7d9bdffdff503b61df1d73d66a3734eb751371d",
+        "revision": "sha256:0c618aeef7e7a1266cc79d5530b13e66ff638f14303aee02724b1f2c07cad2dc",
         "revisionKind": "sha256_content_digest",
         "url": null,
         "restrictedOriginalReference": null
@@ -24579,13 +24592,14 @@
           "PROV-FILE-E721068D008B"
         ],
         "transformations": [
-          "Exact candidate file recorded for internal review; no public/release or recording approval inferred."
+          "Exact candidate file recorded for internal review; no public/release or recording approval inferred.",
+          "2026-10-15 exact-byte join refresh for merged source or claim-validator repair; existing approvals do not extend to changed bytes."
         ]
       },
       "compositionDependencies": [],
       "checksum": {
         "algorithm": "SHA-256",
-        "value": "90ba5a954549b324215ca2b8c7d9bdffdff503b61df1d73d66a3734eb751371d",
+        "value": "0c618aeef7e7a1266cc79d5530b13e66ff638f14303aee02724b1f2c07cad2dc",
         "status": "Exact SHA-256 content digest of current bytes; pin is external to the source file."
       },
       "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent, teammate and producer/source-owner review pending.",
@@ -30117,6 +30131,2059 @@
       "blockers": [
         "This record preserves prior draft manifest bytes and grants no external destination permission.",
         "The archived draft is not an approved release or submission artifact."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-01FBAE86E137",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-explainer-001-r09-repository-internal-review-text-en-us-concept-explainer.md",
+        "revision": "sha256:466d020a4d8d3e13a3b870a8bac5508b43e1d36bded53f574ecb00f7287de75a",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "466d020a4d8d3e13a3b870a8bac5508b43e1d36bded53f574ecb00f7287de75a",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-E8F957F43899",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-human-recording-runbook-001-r09-repository-internal-review-text-en-us-planned-internal-human-guide.md",
+        "revision": "sha256:0c618aeef7e7a1266cc79d5530b13e66ff638f14303aee02724b1f2c07cad2dc",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "0c618aeef7e7a1266cc79d5530b13e66ff638f14303aee02724b1f2c07cad2dc",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending.",
+        "Planned runbook: not cleared for publication or recording."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-008C73E1F766",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-narration-001-r09-repository-internal-review-text-en-us-caption-exact-rehearsal-narration.md",
+        "revision": "sha256:818dcf3f2796bd2a29a2f3597d2a0fcc36b36fd7e87e50454af94616058e5cf6",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "818dcf3f2796bd2a29a2f3597d2a0fcc36b36fd7e87e50454af94616058e5cf6",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-D486F00E6A6D",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-recording-checklist-001-r09-repository-internal-review-text-en-us-rehearsal-recording-plan.md",
+        "revision": "sha256:a5bc24e439a7c24fc68917e65875e3c056138fbeb56bc21d1218858e4fcd07b3",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "a5bc24e439a7c24fc68917e65875e3c056138fbeb56bc21d1218858e4fcd07b3",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-ABF731C7B7BB",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-rehearsal-captions-001-r09-repository-internal-review-text-en-us-silent-rehearsal-captions.srt",
+        "revision": "sha256:efb9159af59e22b5fa2f7781ed25e1bda245ee833eb09662c435ab19e197a610",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "efb9159af59e22b5fa2f7781ed25e1bda245ee833eb09662c435ab19e197a610",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-A6F3AF78A173",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-rehearsal-captions-001-r09-repository-internal-review-text-en-us-silent-rehearsal-captions.vtt",
+        "revision": "sha256:acd7579f4471f06fee0d7949185e4e000760f35f0a931fdad24eab29fc2a3322",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "acd7579f4471f06fee0d7949185e4e000760f35f0a931fdad24eab29fc2a3322",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-E6757EDECE2D",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-rehearsal-scenes-001-r09-repository-internal-review-text-en-us-silent-rehearsal-scene-map.json",
+        "revision": "sha256:2dcc324c4e41cd5b103b2630774ac08cc771e811e17219026b7204f4bef32fca",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "2dcc324c4e41cd5b103b2630774ac08cc771e811e17219026b7204f4bef32fca",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-CC77A26A2E9C",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-rehearsal-transcript-001-r09-repository-internal-review-text-en-us-caption-exact-transcript.md",
+        "revision": "sha256:36792f4d4ac8389dd9853be5a54d5ac2672c527f3984d1ac3dc28018ae3f385e",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "36792f4d4ac8389dd9853be5a54d5ac2672c527f3984d1ac3dc28018ae3f385e",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-7EE8A3ECFB2B",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-rehearsal-video-001-r09-repository-internal-review-1280x720-en-us-silent-concept-rehearsal.mp4",
+        "revision": "sha256:c2bc7ca195d9be07c7cc007c4cdd5e1cf7b7d2ebc5530f64e2d441c6288f9ace",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "c2bc7ca195d9be07c7cc007c4cdd5e1cf7b7d2ebc5530f64e2d441c6288f9ace",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-F094A8F202E6",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-storyboard-001-r09-repository-internal-review-text-en-us-150-second-rehearsal-plan.md",
+        "revision": "sha256:b8dfd4d468fdf8f61ac6463d2bb99a54190c7254588159add6b1f12a19d17467",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "b8dfd4d468fdf8f61ac6463d2bb99a54190c7254588159add6b1f12a19d17467",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-5A31410F87D5",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-submission-narrative-001-r09-repository-internal-review-text-en-us-submission-preflight.md",
+        "revision": "sha256:5a3a3e16035268426447c585fecfcec4a6fd988d35b936f74f38a090ea069635",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "5a3a3e16035268426447c585fecfcec4a6fd988d35b936f74f38a090ea069635",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-8F606FA4B50C",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-workflow-diagram-001-r09-repository-internal-review-1440x900-en-us-concept-workflow-presentation-png.png",
+        "revision": "sha256:9e69d9fe1c6a097ef26fc6eefa473c4fee4b5bca8f075392740698988f6355fe",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "9e69d9fe1c6a097ef26fc6eefa473c4fee4b5bca8f075392740698988f6355fe",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-2252067740F8",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-workflow-diagram-001-r09-repository-internal-review-1440x900-en-us-concept-workflow-vector.svg",
+        "revision": "sha256:df5df2078aee74fb36bfe4ed6fc572db5217d2a9a64c47b984e05e19acbf0971",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "df5df2078aee74fb36bfe4ed6fc572db5217d2a9a64c47b984e05e19acbf0971",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-B89057D32E47",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/demo-001-demo-workflow-diagram-001-r09-repository-internal-review-text-en-us-concept-workflow-alt-text.md",
+        "revision": "sha256:9e635bd37e6c7490971cb14c65d149201973dbc1ad40fb7af018476174ca0ad1",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "9e635bd37e6c7490971cb14c65d149201973dbc1ad40fb7af018476174ca0ad1",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-16F1E9F7391A",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/screenshot-001-demo-screenshot-set-001-r09-repository-internal-review-1200x900-en-us-fictional-stub-concept-presentation-png.png",
+        "revision": "sha256:dc78487e912bd973681af285980fe87b631ca44e6656f981e169f4a284ffd578",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "dc78487e912bd973681af285980fe87b631ca44e6656f981e169f4a284ffd578",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-145D3A043701",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/screenshot-001-demo-screenshot-set-001-r09-repository-internal-review-1200x900-en-us-fictional-stub-concept-vector.svg",
+        "revision": "sha256:2e0109baed36145184f7a75ae5a2e6b5637221dd1ebeb46c7111f0d5cec34df2",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "2e0109baed36145184f7a75ae5a2e6b5637221dd1ebeb46c7111f0d5cec34df2",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-41B171CB34C8",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/screenshot-001-demo-screenshot-set-001-r09-repository-internal-review-text-en-us-fictional-stub-concept-alt-text.md",
+        "revision": "sha256:80886891c077c685ee0080a85691ad83dc04f13fae0be55462647bda906fc186",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "80886891c077c685ee0080a85691ad83dc04f13fae0be55462647bda906fc186",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-688EA9E380F0",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/social-001-launch-x-alt-text-001-r09-repository-internal-review-text-en-us-concept-announcement-alt-text.md",
+        "revision": "sha256:b2a1476a5138d702cf59b544944ef78ccf567c000d432ae2e60729ed77bac554",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "b2a1476a5138d702cf59b544944ef78ccf567c000d432ae2e60729ed77bac554",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-18B302B6FCA2",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/social-001-launch-x-copy-001-r09-repository-internal-review-text-en-us-pending-template-and-docs-update.md",
+        "revision": "sha256:184a1a1a321334866adf310df336b09cee5b7f02cd5d26fb62fb1e9ed6eed2da",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "184a1a1a321334866adf310df336b09cee5b7f02cd5d26fb62fb1e9ed6eed2da",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-29A5138AAE69",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/social-001-launch-x-key-visual-001-r09-repository-internal-review-1200x675-en-us-concept-announcement-1200x675-png.png",
+        "revision": "sha256:7b0fd59eaa903c4765cdabbc47a9ddc2202cc010d3ac3169d51dafda40c262ee",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "7b0fd59eaa903c4765cdabbc47a9ddc2202cc010d3ac3169d51dafda40c262ee",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-6FD9B08E7C71",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/assets/social-001-launch-x-key-visual-001-r09-repository-internal-review-1200x675-en-us-concept-announcement-vector.svg",
+        "revision": "sha256:a900eaa6f9ba444160761910b791a5044cd6fb50fa510721c760142fb1fd4699",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "a900eaa6f9ba444160761910b791a5044cd6fb50fa510721c760142fb1fd4699",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-E50B2517670B",
+      "kind": "validation_test",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/history/manifest-cfc5a56d12f4283c.json",
+        "revision": "sha256:cfc5a56d12f4283c7b17d5e89ebf39cfb5d2e16ea49b500344f84d8acd3afec7",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_candidate_evidence",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "Internal repository candidate review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "Internal repository candidate review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": false,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "cfc5a56d12f4283c7b17d5e89ebf39cfb5d2e16ea49b500344f84d8acd3afec7",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants no external destination permission.",
+        "Independent exact-revision and applicable source-owner review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-5077EDF0741A",
+      "kind": "validation_test",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "tests/test_announcement_submission.py",
+        "revision": "sha256:bb599425f59c8fa12680cf4602191a78a64bf619cb9ec8c5d8eeb5f62505bc81",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_candidate_evidence",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "Internal repository candidate review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "Internal repository candidate review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": false,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "bb599425f59c8fa12680cf4602191a78a64bf619cb9ec8c5d8eeb5f62505bc81",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants no external destination permission.",
+        "Independent exact-revision and applicable source-owner review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-DED7E35CB9A3",
+      "kind": "validation_test",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "tests/test_producer_go_handoff.py",
+        "revision": "sha256:1a4080b6eb4a6cdf838594d9dfe647953f255c6bcd2901293ea52e2f22b38637",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_candidate_evidence",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "Internal repository candidate review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "Internal repository candidate review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": false,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "1a4080b6eb4a6cdf838594d9dfe647953f255c6bcd2901293ea52e2f22b38637",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants no external destination permission.",
+        "Independent exact-revision and applicable source-owner review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-7F74897C1061",
+      "kind": "validation_test",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "tests/test_recording_handoff_review.py",
+        "revision": "sha256:319e252a9a822f3b4d172cb4e573c0a46507c0c8821584221ff6132637079793",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_candidate_evidence",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "Internal repository candidate review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "Internal repository candidate review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": false,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "319e252a9a822f3b4d172cb4e573c0a46507c0c8821584221ff6132637079793",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants no external destination permission.",
+        "Independent exact-revision and applicable source-owner review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-D4E118A3C4B5",
+      "kind": "validation_test",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "tests/test_submission_workflow.py",
+        "revision": "sha256:124a74ba28d9c8b0bff04d6d3cc4aa633f5764dabf9a5d70bf38ac6ff5efd550",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_candidate_evidence",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "Internal repository candidate review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "Internal repository candidate review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": false,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "124a74ba28d9c8b0bff04d6d3cc4aa633f5764dabf9a5d70bf38ac6ff5efd550",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants no external destination permission.",
+        "Independent exact-revision and applicable source-owner review remain pending."
+      ]
+    },
+    {
+      "assetId": "PROV-FILE-D67AE29E0DB6",
+      "kind": "internal_package_copy",
+      "source": {
+        "repo": "Jevelopers-neatHack-2026/marketing-material",
+        "path": "release/v0.1.0-rehearsal/view/demo/deck/deck-001-demo-deck-support-001-r09-repository-internal-review-responsive-en-us-concept-responsive-html.html",
+        "revision": "sha256:def05df0028adcaaac4f22612cb8b925cc9f22c310691c20abbc21e78cf78770",
+        "revisionKind": "sha256_content_digest",
+        "url": null,
+        "restrictedOriginalReference": null
+      },
+      "createdAt": "2026-10-15",
+      "creator": "Codex sole marketing-material implementation writer; user-authorized older-issue campaign. Existing source authorship remains in Git history.",
+      "toolModel": "OpenAI Codex GPT-6 runtime per session developer identity; exact backend model ID, effort, tier, session UUID and usage unavailable. Local Python 3.9.6; no external product/provider calls.",
+      "evidenceClassification": "internal_draft_package_copy",
+      "consent": {
+        "status": "not_applicable_synthetic_or_first_party_candidate",
+        "subjects": [],
+        "details": "No external subject or private customer material is asserted in this file; this classification does not establish source-owner or brand rights."
+      },
+      "permission": {
+        "status": "authorized_internal_candidate_review_only",
+        "reference": "Internal candidate-review permission only under the assigned repository task; source-owner, brand and destination rights are not granted.",
+        "owner": "User-assigned marketing-material supervisor; relevant upstream source owners retain external rights authority.",
+        "approvedDestinations": [
+          "repository-internal-review"
+        ],
+        "externalPublication": "not granted"
+      },
+      "attribution": {
+        "required": false,
+        "reference": null,
+        "reason": "First-party draft text, local tooling, or internal evidence; no third-party content permission is inferred."
+      },
+      "allowedDestinations": [
+        "repository-internal-review"
+      ],
+      "allowedModifications": [
+        "Keep the exact source path, checksum, draft/internal classification, limitations and relevant accessible alternative linked; changed bytes require refreshed provenance and review."
+      ],
+      "expiry": "No external-use permission granted; reassess before any proposed external use and at the next source review.",
+      "reviewTrigger": [
+        "Before any external reuse or publication.",
+        "Source bytes, copy, composition, accessibility alternative, evidence scope or destination changes.",
+        "At expiry or upon source-owner/rights update."
+      ],
+      "redaction": {
+        "required": true,
+        "method": "Format-scoped internal inspection only; no general redaction or privacy guarantee.",
+        "visualPixelReview": "See exact linked review/visual receipt when applicable; independent review pending.",
+        "renderedMetadataAndNotesReview": "Only receipt-scoped checks apply; otherwise not performed.",
+        "releaseExportExists": false,
+        "scope": "Internal candidate only; no released derivative."
+      },
+      "lineage": {
+        "derivedFrom": [],
+        "derivatives": [],
+        "transformations": [
+          "Exact internal candidate copy or validation support; no publication permission."
+        ]
+      },
+      "compositionDependencies": [],
+      "checksum": {
+        "algorithm": "SHA-256",
+        "value": "def05df0028adcaaac4f22612cb8b925cc9f22c310691c20abbc21e78cf78770",
+        "status": "Exact current bytes for internal candidate review; no approval granted."
+      },
+      "reviewer": "User-assigned marketing-material supervisor (AI session) for packaging handoff only; independent exact-byte and source-owner/rights review pending.",
+      "reviewDate": null,
+      "reviewStatus": "pending",
+      "publishability": "blocked",
+      "blockers": [
+        "This record grants internal candidate-review scope only, not external destination permission.",
+        "Independent exact-byte and applicable source-owner, brand and destination review remain pending."
       ]
     }
   ],
