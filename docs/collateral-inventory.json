@@ -3730,7 +3730,7 @@
       "exists": true,
       "releaseEligible": false,
       "trackedAtRevision": "3acafe9638d8e75a0685c82ffe3bbd8e8b3186c6",
-      "sha256": "6952747c6781ee09f76e6f0bbdd729fc53684043c99f86fdd4e0d14c6e4dead0",
+      "sha256": "2d6dc63a6acc652bd9500b10afed78f3abc15a57ff26c1e6f473505cf5108bc0",
       "provenanceRecordId": "HANDOFF-MANIFEST-001"
     },
     {
@@ -7108,7 +7108,7 @@
     {
       "fileId": "FILE-E50B2517670B",
       "path": "release/v0.1.0-rehearsal/history/manifest-cfc5a56d12f4283c.json",
-      "classification": "validation_test",
+      "classification": "internal_package_control",
       "pathAvailability": "created_in_candidate",
       "lifecycleState": "not_applicable",
       "exists": true,
@@ -7149,8 +7149,8 @@
       "lifecycleState": "not_applicable",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "sha256:319e252a9a822f3b4d172cb4e573c0a46507c0c8821584221ff6132637079793",
-      "sha256": "319e252a9a822f3b4d172cb4e573c0a46507c0c8821584221ff6132637079793",
+      "trackedAtRevision": "sha256:5df50cbf16b3a24fdd4dd84aaa2ace953b09e4ed59e84a6615f557a072d89de5",
+      "sha256": "5df50cbf16b3a24fdd4dd84aaa2ace953b09e4ed59e84a6615f557a072d89de5",
       "provenanceRecordId": "PROV-FILE-7F74897C1061"
     },
     {
@@ -7696,7 +7696,7 @@
     {
       "fileId": "FILE-B265BA032682",
       "path": "release/v0.1.0-rehearsal/history/manifest-6952747c6781ee09.json",
-      "classification": "validation_test",
+      "classification": "internal_package_control",
       "pathAvailability": "created_in_candidate",
       "lifecycleState": "not_applicable",
       "exists": true,
@@ -7716,6 +7716,18 @@
       "trackedAtRevision": "sha256:def05df0028adcaaac4f22612cb8b925cc9f22c310691c20abbc21e78cf78770",
       "sha256": "def05df0028adcaaac4f22612cb8b925cc9f22c310691c20abbc21e78cf78770",
       "provenanceRecordId": "PROV-FILE-E76C1DC8543E"
+    },
+    {
+      "fileId": "FILE-653813CD57C0",
+      "path": "release/v0.1.0-rehearsal/history/manifest-2d6dc63a6acc652b.json",
+      "classification": "internal_package_control",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:2d6dc63a6acc652bd9500b10afed78f3abc15a57ff26c1e6f473505cf5108bc0",
+      "sha256": "2d6dc63a6acc652bd9500b10afed78f3abc15a57ff26c1e6f473505cf5108bc0",
+      "provenanceRecordId": "PROV-FILE-653813CD57C0"
     }
   ],
   "submissionScope": {
