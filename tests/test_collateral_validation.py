@@ -142,6 +142,39 @@ class CollateralPolicyValidationTests(unittest.TestCase):
         errors = validate_claims(mutated)
         self.assertTrue(any("cannot be approved with unavailable/unconfirmed destination" in item for item in errors), errors)
 
+    def test_documentation_cta_rejects_mutable_or_ambiguous_targets(self):
+        original = next(row for row in self.claims["ctas"] if row["id"] == "CTA-REPOSITORY-DOCS-VISUAL-001")
+        target = original["target"]
+        commit = target.split("/blob/")[1].split("/")[0]
+        bad_targets = (
+            target.replace(commit, "main"), target.replace(commit, commit[:7]),
+            target.replace("/blob/", "/tree/"), "https://github.com/",
+            target + "?raw=1", target + "#changed", target + "/../other.md",
+            target.replace("README.md", "%2e%2e/README.md"),
+            target.replace("README.md", "folder//README.md"),
+            target.replace("github.com/", "github.com.evil.invalid/"),
+            target.replace("README.md", "folder\\README.md"),
+            "https://[github.com/", target.replace("README.md", "READ\nME.md"), None,
+        )
+        for bad_target in bad_targets:
+            with self.subTest(target=bad_target):
+                mutated = copy.deepcopy(self.claims)
+                row = next(row for row in mutated["ctas"] if row["id"] == original["id"])
+                row["target"] = bad_target
+                self.assertTrue(any(original["id"] in error and "full commit" in error for error in validate_claims(mutated)))
+                blockers = selected_collateral_blockers(mutated, self.provenance, ["LAUNCH-X-KEY-VISUAL-001"])
+                self.assertTrue(any(original["id"] in error and "unpinned" in error for error in blockers), blockers)
+        self.assertEqual([], validate_claims(self.claims))
+
+    def test_documentation_review_cannot_approve_a_different_destination_class(self):
+        for destination_class in ("product_transaction", "none"):
+            with self.subTest(destination_class=destination_class):
+                mutated = copy.deepcopy(self.claims)
+                row = next(row for row in mutated["ctas"] if row["id"] == "CTA-REPOSITORY-DOCS-VISUAL-001")
+                row["destinationClass"] = destination_class
+                self.assertTrue(any(row["id"] in error for error in validate_claims(mutated)))
+                self.assertTrue(any(row["id"] in error and "unpinned" in error for error in selected_collateral_blockers(mutated, self.provenance, ["LAUNCH-X-KEY-VISUAL-001"])))
+
     def test_unknown_or_revoked_rights_never_allow_publication(self):
         for status in ("unknown", "revoked"):
             with self.subTest(status=status):

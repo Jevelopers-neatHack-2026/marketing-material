@@ -55,7 +55,7 @@ This is the current operational companion to [`narration.md`](narration.md), a f
 
 Rechecked 2026-10-12 against the [organizer FAQ](https://neatlogs.com/hackathon) and the human procedure in [the recording runbook](human-recording-runbook.md#9-after-the-take): **both steps are required**. An authorized human makes a public quote-post of the official launch post and must attach the demo video with `@neatlogs`, `@EntireHQ` and `@arithecfo`. The authorized team leader separately completes [the submission form](https://neatlogs.com/submission), reviews the entry and selects `Submit project`; `Continue` saves a draft, not a completed entry. Record the posted-entry URL and a separate redacted final form acknowledgement with a timestamp after the take. Those receipts do not replace media, rights or claim review; no agent recording, upload, post or submission is authorized.
 
-The website window on 2026-10-12 is 19:00–23:55 IST / 09:30–14:25 EDT / 13:30–18:25 UTC; the form cannot be pre-filled before opening. A later organizer Discord cutoff overrides the website window and must be confirmed by the human submitter. Leave private form values out of the repository; the runbook distinguishes public post contents, private leader fields and separately reviewed tool descriptions.
+The earlier 2026-10-12 website range (19:00–23:55 IST; 13:30–18:25 UTC) is historical; see [the runbook's dated deadline check](human-recording-runbook.md#2-what-the-organizer-and-the-entry-require). The latest organizer Discord cutoff remains authoritative and must be confirmed by the human submitter. Leave private form values out of the repository; the runbook distinguishes public post contents, private leader fields and separately reviewed tool descriptions.
 
 ## Capture status and roles
 
@@ -88,3 +88,12 @@ For authorized human teammates only. Agents must not execute this sequence; capt
 | Official post, cutoff, required links, submitter authority | `PENDING` | Current organizer/Discord information and confirmed fields |
 
 Review roles listed here are routing obligations only; no approval is claimed or requested by this document. The user-assigned marketing-material supervisor remains accountable for this candidate's copy and handoff, while source owners retain evidence, product, brand, rights,finance, and destination authority.
+
+
+## Dated producer GO — 6daafba (historical)
+
+At **2026-10-12T17:21:38Z**, the [producer reported](https://github.com/Jevelopers-neatHack-2026/marketing-material/issues/22#issuecomment-6129152479) `/api/health` at `6daafba` and gave a GO for the human take. The instruction was to proceed without #104 or #112, which were absent from that observed build. This is an attributed historical observation, not a fresh runtime check and not a completed recording.
+
+The [2026-10-12T18:06:34Z amendment](https://github.com/Jevelopers-neatHack-2026/marketing-material/issues/22#issuecomment-6129852860) subsequently reported `01c65ae`, the landing/StudioStart opening and `/make` alternative; it retained the two-turn agent workaround because #100 and #112 were still absent. Neither receipt establishes today's deployed build or current eligibility. Agent capture remains `CANCELLED_USER_REQUEST_NO_RESTART`; there is no new provider authorization, recording, upload, publication or submission authority here.
+
+See the historical sequence and final-media limitations in the [human runbook](human-recording-runbook.md).

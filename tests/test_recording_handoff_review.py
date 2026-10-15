@@ -130,8 +130,13 @@ class RecordingHandoffReviewTests(unittest.TestCase):
         for token in ('2026-10-12', '19:00', '23:55', 'IST', '09:30', '14:25', 'EDT', '13:30', '18:25', 'UTC'):
             with self.subTest(token=token):
                 self.assertIn(token, body)
-        self.assertRegex(body, r'Discord[^\n]*overrides')
-        self.assertIn('cannot be pre-filled before', body)
+        self.assertIn('Earlier website observation (2026-10-12; superseded)', body)
+        self.assertIn('Read-only website check (2026-10-12 20:24:12 UTC)', body)
+        self.assertIn('October 13, 07:00 IST', body)
+        self.assertIn('October 13, 01:30 UTC', body)
+        self.assertIn('latest Discord deadline remains authoritative and unverified', body)
+        self.assertIn('could not be pre-filled beforehand', body)
+        self.assertIn('Form availability and submission acceptance were not verified', body)
 
     def test_producer_selection_and_fallback_supersede_legacy_shots(self):
         body = section(self.runbook, '6. Planned timed shot list (a plan, not an executed dry run)')
