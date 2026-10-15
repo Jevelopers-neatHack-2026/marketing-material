@@ -88,3 +88,12 @@ For authorized human teammates only. Agents must not execute this sequence; capt
 | Official post, cutoff, required links, submitter authority | `PENDING` | Current organizer/Discord information and confirmed fields |
 
 Review roles listed here are routing obligations only; no approval is claimed or requested by this document. The user-assigned marketing-material supervisor remains accountable for this candidate's copy and handoff, while source owners retain evidence, product, brand, rights,finance, and destination authority.
+
+
+## Dated producer GO — 6daafba (historical)
+
+At **2026-10-12T17:21:38Z**, the [producer reported](https://github.com/Jevelopers-neatHack-2026/marketing-material/issues/22#issuecomment-6129152479) `/api/health` at `6daafba` and gave a GO for the human take. The instruction was to proceed without #104 or #112, which were absent from that observed build. This is an attributed historical observation, not a fresh runtime check and not a completed recording.
+
+The [2026-10-12T18:06:34Z amendment](https://github.com/Jevelopers-neatHack-2026/marketing-material/issues/22#issuecomment-6129852860) subsequently reported `01c65ae`, the landing/StudioStart opening and `/make` alternative; it retained the two-turn agent workaround because #100 and #112 were still absent. Neither receipt establishes today's deployed build or current eligibility. Agent capture remains `CANCELLED_USER_REQUEST_NO_RESTART`; there is no new provider authorization, recording, upload, publication or submission authority here.
+
+See the historical sequence and final-media limitations in the [human runbook](human-recording-runbook.md).
