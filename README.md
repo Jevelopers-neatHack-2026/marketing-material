@@ -58,7 +58,7 @@ Work is tracked under [MM-EPIC #1](https://github.com/Jevelopers-neatHack-2026/m
 
 ## Checks
 
-Run from the repository root. There is no CI workflow; these run locally and make no network or paid-provider calls. The tests need Pillow, and the rehearsal test and package validator need `ffprobe`. The recorded environment, Python 3.9.6 with Pillow 11.3.0, is required for package validation as well as rendering ([handoff](docs/collateral-handoff.md#receiver-verification)); on the maintainer's machine that is `/usr/bin/python3`, and other interpreters may lack Pillow or differ.
+Run from the repository root. There is no CI workflow; these run locally and make no network or paid-provider calls. The tests need Pillow, and the rehearsal test and package validator need `ffprobe`. Use the current manifest's `toolchain` for package integrity and regeneration ([handoff](docs/collateral-handoff.md#receiver-verification)); this snapshot records Linux, Python 3.12.14 and ffprobe 7.1.5. The preserved rendering receipts instead record Python 3.9.6, Pillow 11.3.0 and ffprobe 8.1. The full suite checks that historical ffprobe receipt exactly, so it still requires the recorded renderer toolchain; ffprobe 7.1.5 produces a known version-mismatch failure without changing media bytes.
 
 ```sh
 python3 tools/validate_collateral.py --mode draft            # claims, provenance pins, copy joins, tracked-file inventory
@@ -66,7 +66,7 @@ python3 -m unittest discover -s tests                        # all suites (sever
 python3 -m unittest discover -s tests -p 'test_visual_*.py'  # visual and accessibility evidence only (fast)
 ```
 
-The scoped independent review of the rehearsal covers the historical delivery at commit `235697a`, which stays reproducible from its own recorded source snapshot; it fails package validation against the current, changed inventory and provenance by design, and that expected rejection is not a valid current candidate. Package integrity (`package_collateral.py validate`) must pass on the current refreshed delivery commit, using the recorded Python 3.9.6 environment, so a stale current package is a defect to refresh rather than an excuse. The current delivery is produced by the draft refresh workflow in the [handoff](docs/collateral-handoff.md#receiver-verification).
+The scoped independent review of the rehearsal covers the historical delivery at commit `235697a`, which stays reproducible from its own recorded source snapshot; it fails package validation against the current, changed inventory and provenance by design, and that expected rejection is not a valid current candidate. Package integrity (`package_collateral.py validate`) must pass on the current refreshed delivery commit, using that manifest's recorded toolchain, so a stale current package is a defect to refresh rather than an excuse. The current delivery is produced by the draft refresh workflow in the [handoff](docs/collateral-handoff.md#receiver-verification).
 
 Readiness modes are expected to exit non-zero and report `BLOCKED` today:
 

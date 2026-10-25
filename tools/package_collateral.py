@@ -104,19 +104,28 @@ def read_json(path: Path) -> Dict[str, Any]:
 
 
 def safe_path(root: Path, relative: str) -> Path:
-    """Resolve a repository-relative path without accepting escapes/symlinks."""
+    """Resolve a normalized repository-relative path without symlink components."""
+    if not isinstance(relative, str) or not relative or "\\" in relative or "\0" in relative:
+        raise ValueError("path must be a normalized, non-empty repository-relative path")
     candidate = PurePosixPath(relative)
-    if candidate.is_absolute() or ".." in candidate.parts or not candidate.parts:
-        raise ValueError("path must be a non-empty repository-relative path")
-    path = root.joinpath(*candidate.parts)
-    if path.is_symlink():
-        raise ValueError("symlink inputs are not accepted")
+    if (
+        candidate.is_absolute()
+        or ".." in candidate.parts
+        or not candidate.parts
+        or candidate.as_posix() != relative
+    ):
+        raise ValueError("path must be a normalized, non-empty repository-relative path")
     resolved_root = root.resolve()
-    resolved_path = path.resolve(strict=False)
+    path = resolved_root.joinpath(*candidate.parts)
     try:
-        resolved_path.relative_to(resolved_root)
-    except ValueError as exc:
-        raise ValueError("path resolves outside the repository") from exc
+        path.resolve(strict=False).relative_to(resolved_root)
+        current = path
+        while current != resolved_root:
+            if current.is_symlink():
+                raise ValueError("symlink path components are not accepted")
+            current = current.parent
+    except (OSError, RuntimeError, ValueError) as exc:
+        raise ValueError("path must remain inside the repository without symlinks") from exc
     return path
 
 
