@@ -6750,7 +6750,7 @@
       "source": {
         "repo": "Jevelopers-neatHack-2026/marketing-material",
         "path": "docs/collateral-inventory.json",
-        "revision": "sha256:012c2309771d75ca520fdf68ff1f75931c5b2ae48fa285befd7ea171dc214022",
+        "revision": "sha256:1864533db2c86202b529110ac210dec9944e5d82c78ef3528d47c78dd2b42bd8",
         "revisionKind": "sha256_content_digest",
         "url": null,
         "restrictedOriginalReference": null
@@ -6809,7 +6809,7 @@
       "compositionDependencies": [],
       "checksum": {
         "algorithm": "SHA-256",
-        "value": "012c2309771d75ca520fdf68ff1f75931c5b2ae48fa285befd7ea171dc214022",
+        "value": "1864533db2c86202b529110ac210dec9944e5d82c78ef3528d47c78dd2b42bd8",
         "status": "Exact SHA-256 content digest of current inventory bytes; the register is external to this source file."
       },
       "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
@@ -8869,7 +8869,7 @@
       "source": {
         "repo": "Jevelopers-neatHack-2026/marketing-material",
         "path": "release/v0.1.0-rehearsal/manifest.json",
-        "revision": "sha256:deb0c2c66800cae2e61d1d6c968c80fa2edacfedf3cea0a0fcc360c44ae33781",
+        "revision": "sha256:7554df02f9e0af7f6751a7db4e712766ab503dc1fc841b74bae6057d08988139",
         "revisionKind": "sha256_content_digest",
         "url": null,
         "restrictedOriginalReference": null
@@ -8927,7 +8927,7 @@
       "compositionDependencies": [],
       "checksum": {
         "algorithm": "SHA-256",
-        "value": "deb0c2c66800cae2e61d1d6c968c80fa2edacfedf3cea0a0fcc360c44ae33781",
+        "value": "7554df02f9e0af7f6751a7db4e712766ab503dc1fc841b74bae6057d08988139",
         "status": "Computed from exact current bytes; source pin is the immutable commit containing these exact bytes."
       },
       "reviewer": "User-assigned marketing-material supervisor for marketing wording; independent and producer/source-owner review pending.",
