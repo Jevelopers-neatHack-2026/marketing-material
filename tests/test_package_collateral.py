@@ -19,6 +19,60 @@ sys.path.insert(0, str(ROOT / "tools"))
 import package_collateral as package  # noqa: E402
 
 
+class PackagePathTests(unittest.TestCase):
+    def test_rejects_noncanonical_and_invalid_relative_paths(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            for relative in (None, 1, "", ".", "../outside", "/outside", "./source.md", "copy//source.md", "copy/./source.md", "copy/", "copy\\source.md", "copy\0.md"):
+                with self.subTest(path=relative), self.assertRaises(ValueError):
+                    package.safe_path(root, relative)
+
+    def test_accepts_canonical_existing_and_future_paths(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            source = root / "copy/source.md"
+            source.parent.mkdir()
+            source.write_text("Synthetic local source.\n", encoding="utf-8")
+            self.assertEqual(source, package.safe_path(root, "copy/source.md"))
+            self.assertEqual(root / "release/new/output.md", package.safe_path(root, "release/new/output.md"))
+            self.assertEqual(root / "--source.md", package.safe_path(root, "--source.md"))
+
+    def test_rejects_leaf_and_directory_symlinks_including_internal_targets(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary) / "repository"
+            root.mkdir()
+            (root / "source").mkdir()
+            (root / "source/file.md").write_text("Synthetic local source.\n", encoding="utf-8")
+            outside = Path(temporary) / "outside"
+            outside.mkdir()
+            (root / "leaf.md").symlink_to(root / "source/file.md")
+            (root / "internal").symlink_to(root / "source", target_is_directory=True)
+            (root / "external").symlink_to(outside, target_is_directory=True)
+            (root / "broken").symlink_to(root / "missing", target_is_directory=True)
+            (root / "loop").symlink_to(root / "loop", target_is_directory=True)
+            for relative in ("leaf.md", "internal/file.md", "internal/new.md", "external/new.md", "broken/new.md", "loop/new.md"):
+                with self.subTest(path=relative), self.assertRaises(ValueError):
+                    package.safe_path(root, relative)
+
+    def test_package_copy_rejects_directory_alias_before_reading_or_writing(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            source = root / "source.md"
+            source.write_text("Synthetic local source.\n", encoding="utf-8")
+            (root / "retained").mkdir()
+            (root / "release").symlink_to(root / "retained", target_is_directory=True)
+            context = {"spec": {"assets": [{"path": "source.md", "package": True}]}}
+            with patch.object(package, "_load_context", return_value=context), patch.object(
+                package, "_file_fact", return_value={}
+            ), patch.object(package, "package_filename", return_value="copy.md"), patch.object(
+                package, "_package_asset_path", return_value="release/copy.md"
+            ), patch.object(Path, "read_bytes", side_effect=AssertionError("unsafe copy read its source")):
+                with self.assertRaises(ValueError):
+                    package.copy_package_files(root, "test")
+            self.assertEqual([], list((root / "retained").iterdir()))
+            self.assertEqual("Synthetic local source.\n", source.read_text(encoding="utf-8"))
+
+
 class PackagePolicyTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:

@@ -4653,8 +4653,8 @@
       "lifecycleState": "not_applicable",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "sha256:8b270ee10e6a7903d7ac135459ab83cc546bdab9c2003b47158d549bafbce21d",
-      "sha256": "8b270ee10e6a7903d7ac135459ab83cc546bdab9c2003b47158d549bafbce21d",
+      "trackedAtRevision": "sha256:384d599b61cb0536e0a67f2120d34d94a1070030075e1e4d7d4b26a68bd0e1e1",
+      "sha256": "384d599b61cb0536e0a67f2120d34d94a1070030075e1e4d7d4b26a68bd0e1e1",
       "provenanceRecordId": "PROV-FILE-2A535BD0A4EB"
     },
     {
@@ -4689,8 +4689,8 @@
       "lifecycleState": "not_applicable",
       "exists": true,
       "releaseEligible": false,
-      "trackedAtRevision": "44c8ad88ffac455a61f239e4d6dfe14b38a742d0",
-      "sha256": "2409fe19b80d92a0c157c21a67be4fd38f55e4f929857dfd689108aa61bfcc53",
+      "trackedAtRevision": "sha256:865769aaa3ebe3b22a2614111e2ad9881cfa3c10a9b05513a85ce39af46bcbe4",
+      "sha256": "865769aaa3ebe3b22a2614111e2ad9881cfa3c10a9b05513a85ce39af46bcbe4",
       "provenanceRecordId": "PROV-FILE-E9F11F71B634"
     },
     {
@@ -7728,6 +7728,18 @@
       "trackedAtRevision": "sha256:2d6dc63a6acc652bd9500b10afed78f3abc15a57ff26c1e6f473505cf5108bc0",
       "sha256": "2d6dc63a6acc652bd9500b10afed78f3abc15a57ff26c1e6f473505cf5108bc0",
       "provenanceRecordId": "PROV-FILE-653813CD57C0"
+    },
+    {
+      "fileId": "FILE-6E88A79E79B0",
+      "path": "release/v0.1.0-rehearsal/history/manifest-51fd4ebd501012ce.json",
+      "classification": "internal_package_control",
+      "pathAvailability": "created_in_candidate",
+      "lifecycleState": "not_applicable",
+      "exists": true,
+      "releaseEligible": false,
+      "trackedAtRevision": "sha256:51fd4ebd501012ce4d6ab4d8bf8f64ce469a8a304bdf95bbc6beb74d8ba5a885",
+      "sha256": "51fd4ebd501012ce4d6ab4d8bf8f64ce469a8a304bdf95bbc6beb74d8ba5a885",
+      "provenanceRecordId": "PROV-FILE-6E88A79E79B0"
     }
   ],
   "submissionScope": {
